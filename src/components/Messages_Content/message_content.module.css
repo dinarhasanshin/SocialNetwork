@@ -1,0 +1,77 @@
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.messages_container{
+    display: grid;
+    grid-template-areas:
+            "dc mc"
+            "dc ma";
+    grid-template-rows: 1fr 150px;
+    grid-template-columns: 1fr 2fr;
+}
+.dialogs_content{
+    grid-area: dc;
+    background-color: cyan;
+}
+.dialogs_content ul{
+    padding: 0;
+    margin: 0;
+}
+.messages_content{
+    box-sizing: border-box;
+    overflow-y: scroll;
+    grid-area: mc;
+    background-color: green;
+}
+.messages_content ul{
+    padding: 0;
+    margin: 0;
+}
+.messages_actions{
+    grid-area: ma;
+    background-color: blue;
+}
+.messages_action{
+    display: block;
+}
+
+.messages_action button{
+    outline: none;
+    float: right;
+    padding: 5px 15px;
+    background-color: lightgrey;
+    border-radius: 5px;
+    border: 0px solid white;
+    margin: 10px 0 0;
+}
+.messages_action button:hover{
+    background-color: #8224e3;
+    border: 0px solid white;
+}
+.messages_action button:not(:first-child){
+    margin-right: 15px;
+}
+.messages_add{
+    height: 10px;
+    margin-top: 20px;
+    padding: 20px 35px;
+    border: 1px solid lightgrey;
+    border-radius: 30px;
+}
+.messages_input{
+    display: block;
+}
+.messages_input input{
+    outline: none;
+    border: 2px solid lightgrey;
+    width: 350px;
+    height: 40px;
+    border-radius: 15px;
+}
+.messages_add input:hover{
+    border: 2px solid #8224e3;
+}

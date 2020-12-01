@@ -1,0 +1,52 @@
+.content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 375px 4fr;
+    grid-template-areas:
+            "cht cht cht"
+            "cd cps cpd";
+    grid-area: co;
+    overflow-y: auto;
+}
+
+.content_data{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    grid-area: cd;
+    background-color: pink;
+}
+.content_person_data{
+    grid-area: cpd;
+    background-color: blue;
+}
+.data_connections{
+    display: flex;
+    flex-direction: column;
+}
+.data_connections ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.data_connections ul li{
+    text-align: center;
+    list-style: none;
+    margin-right: 50px;
+}
+.data_connections ul li span{
+    font-size: 20px;
+    color: #8224e3;
+}
+.data_connections ul li:last-child{
+    margin-right: 60px;
+}
+.data_connections ul li p{
+    margin: 0;
+    padding: 0;
+
+}
+.data_connections ul li p{
+    font-size: 17px;
+    color: grey;
+}
