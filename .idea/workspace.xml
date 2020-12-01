@@ -2,55 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/logo512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Message_Wrapper/message_wrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Message_Wrapper/message_wrapper.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/Dialog_Item/dialog_item.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/Dialog_Item/dialog_item.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/Messages_Item/messages_item.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/Messages_Item/messages_item.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/Post/post.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/Post/post.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/ProfileInfo/profile_info.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/ProfileInfo/profile_info.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/posts_content.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/logo_Earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reportWebVitals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +94,7 @@
       <workItem from="1606735585428" duration="11719000" />
       <workItem from="1606768188398" duration="441000" />
       <workItem from="1606807076374" duration="14793000" />
-      <workItem from="1606841381136" duration="1859000" />
+      <workItem from="1606841381136" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -151,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606842276265</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Upload to GitHub">
+      <created>1606843441309</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606843441309</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
