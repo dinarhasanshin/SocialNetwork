@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-    </list>
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +98,7 @@
       <workItem from="1606908783522" duration="861000" />
       <workItem from="1606912934406" duration="2556000" />
       <workItem from="1606925738706" duration="2141000" />
-      <workItem from="1607015911780" duration="4716000" />
+      <workItem from="1607015911780" duration="5209000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -136,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607016646734</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Start adding container components">
+      <created>1607027540060</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607027540060</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
