@@ -4,18 +4,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/redux-store';
 
-let reRenderTree = (state) => {
+let reRenderTree = () => {
     render(
-        <App state={state} dispatch={store.dispatch.bind(store)}/>,
+        <App store={ store } dispatch={ store.dispatch.bind(store) }/>,
         document.getElementById('root')
     );
 }
 
-reRenderTree(store.getState());
+reRenderTree();
 
 store.subscribe(() => {
-    let state = store.getState();
-    reRenderTree(state);
+    debugger
+    reRenderTree();
 });
 
 

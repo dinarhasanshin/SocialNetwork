@@ -10,24 +10,26 @@ import {addMessageActionCreator, updateNewMessageText} from '../../redux/dialogs
 
 const message_content = (props) => {
 
-    let dialog_elements = props.state.dialogs_data.map(p =>
+    let state = props.store.getState();
+
+    let dialog_elements = state.messagesPage.dialogs_data.map(p =>
         (
             <DialogItem name={p.name} id={p.id}/>
         )
     )
-    let message_elements = props.state.messages_data.map(p =>
+    let message_elements = state.messagesPage.messages_data.map(p =>
         (
             <MessagesItem message={p.message}/>
         )
     )
 
     let addMessage = () => {
-        props.dispatch(addMessageActionCreator())
+        props.store.dispatch(addMessageActionCreator())
     }
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.dispatch(updateNewMessageText(text))
+        props.store.dispatch(updateNewMessageText(text))
     }
 
     return (
@@ -44,7 +46,7 @@ const message_content = (props) => {
             </div>
             <div className={s.messages_actions}>
                 <div className={s.messages_add}>
-                    <input type="text" onChange={ onMessageChange } value={props.state.newMessageText}/>
+                    <input type="text" onChange={ onMessageChange } value={state.messagesPage.newMessageText}/>
                 </div>
                 <div className={s.messages_action}>
                     <button onClick={ addMessage }>Send</button>

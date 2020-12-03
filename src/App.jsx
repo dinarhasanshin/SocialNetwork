@@ -17,9 +17,9 @@ const App = (props) => {
                 <Header/>
                 <NavWrapper/>
                 <MessageWrapper/>
-                <Route path="/messages_content" render={() => <MessagesContent state={props.state.messagesPage} dispatch={props.dispatch}/>}/>
+                <Route path="/messages_content" render={() => <MessagesContent store={ props.store }/>}/>
 
-                <Route path="/posts_content" render={() => <PostsContent state={props.state.profilePage} dispatch={props.dispatch}/>}/>
+                <Route path="/posts_content" render={() => <PostsContent store={ props.store } dispatch={ props.dispatch }/>}/>
 
                 <Route path="/friends_content" render={() => <FriendsContent/>}/>
             </div>
