@@ -11,15 +11,16 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 
 const App = (props) => {
+    debugger;
     return (
         <BrowserRouter>
             <div className="container">
                 <Header/>
                 <NavWrapper/>
                 <MessageWrapper/>
-                <Route path="/messages_content" render={() => <MessagesContent state={props.state.messagesPage} dispatch={props.dispatch}/>}/>
+                <Route path="/messages_content" render={() => <MessagesContent state={props.store.messagesPage} dispatch={props.dispatch}/>}/>
 
-                <Route path="/posts_content" render={() => <PostsContent state={props.state.profilePage} dispatch={props.dispatch}/>}/>
+                <Route path="/posts_content" render={() => <PostsContent state={props.store} dispatch={props.dispatch}/>}/>
 
                 <Route path="/friends_content" render={() => <FriendsContent/>}/>
             </div>
