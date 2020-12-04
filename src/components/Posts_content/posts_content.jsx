@@ -6,7 +6,6 @@ import s from './posts_content.module.css';
 
 const posts_content = (props) =>{
     let state = props.store.getState();
-    debugger;
     return(
         <section className={ s.content }>
             <ContentHeader/>
@@ -18,7 +17,7 @@ const posts_content = (props) =>{
                 </div>
             </div>
 
-            <PostsContainer store={props.store}/>
+            <PostsContainer/>
 
             <div className={ s.content_person_data }>
                 <div className={ s.data_connections }>

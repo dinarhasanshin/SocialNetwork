@@ -7,7 +7,9 @@ import s from './posts.module.css';
 
 const posts = (props) =>{
 
-    let postsElements = props.postsCollection.map(p => <Post message={p.message}/>)
+    let state = props.profilePage;
+
+    let postsElements = state.postsCollection.map(p => <Post message={p.message}/>)
 
 
     let addPost = () => {
@@ -23,7 +25,7 @@ const posts = (props) =>{
         <div className={s.content_posts}>
             <div className={s.posts_add}>
                 <div className={s.posts_input}>
-                    <input type="text" onChange={ onPostChange } value={props.newPostText}/>
+                    <input type="text" onChange={ onPostChange } value={state.newPostText}/>
                 </div>
                 <div className={s.posts_actions}>
                     <button onClick={ addPost }>Send</button>

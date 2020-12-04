@@ -3,20 +3,18 @@ import {render} from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './redux/redux-store';
+import {BrowserRouter} from "react-router-dom";
+import {Provider} from "react-redux";
 
-let reRenderTree = () => {
-    render(
-        <App store={ store } dispatch={ store.dispatch.bind(store) }/>,
-        document.getElementById('root')
-    );
-}
+render(
+    <BrowserRouter>
+        <Provider store={ store }>
+            <App store={ store }/>
+        </Provider>
+    </BrowserRouter>,
+    document.getElementById('root')
+);
 
-reRenderTree();
-
-store.subscribe(() => {
-    debugger
-    reRenderTree();
-});
 
 
 
