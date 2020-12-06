@@ -39,6 +39,21 @@ let store = {
                 {id: 5, message: 'Hey, what is your health?'}
             ],
             newPostText: 'CubeFace is strong!'
+        },
+        FriendsPage: {
+            FriendsCollection:[
+                {id: 1, FirstName: 'Anastasiya', LastName: 'Sazonova', UserFriends: 7, UserGroups: 2, Followed: true},
+                {id: 3, FirstName: 'Airat', LastName: 'Hasanshin', UserFriends: 22, UserGroups: 19, Followed: true}
+            ],
+            UsersCollection:[
+                {id: 2, FirstName: 'Igor', LastName: 'Sovkov', UserFriends: 2, UserGroups: 9, Followed: false},
+                {id: 4, FirstName: 'Ramazan', LastName: 'Zyamalow', UserFriends: 13, UserGroups: 1, Followed: false}
+            ],
+            Tabs:[
+                {AllUsers: 'AllUsers'},
+                {Friends: 'Friends'}
+            ],
+            ActiveTad: 'AllUsers'
         }
 
 

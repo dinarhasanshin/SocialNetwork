@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/default_user_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +44,7 @@
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Messages_Content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Friends_Content" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -50,9 +54,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ReactLearning\react-social-network\src\components\Friends_Content" />
+      <recent name="D:\ReactLearning\react-social-network\src\redux" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Messages_Content" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content\Posts" />
-      <recent name="D:\ReactLearning\react-social-network\src\redux" />
       <recent name="D:\ReactLearning\react-social-network\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -119,7 +124,10 @@
       <workItem from="1606925738706" duration="2141000" />
       <workItem from="1607015911780" duration="5810000" />
       <workItem from="1607070021356" duration="922000" />
-      <workItem from="1607076125874" duration="8908000" />
+      <workItem from="1607076125874" duration="18267000" />
+      <workItem from="1607138306650" duration="7284000" />
+      <workItem from="1607168320706" duration="478000" />
+      <workItem from="1607239281959" duration="10256000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -163,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607027860017</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ContextAPI">
+      <created>1607092564675</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607092564675</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +202,8 @@
     <MESSAGE value="Upload to GitHub_" />
     <MESSAGE value="Start adding container components" />
     <MESSAGE value="Start adding container components_" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start adding container components_" />
+    <MESSAGE value="ContextAPI" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContextAPI" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

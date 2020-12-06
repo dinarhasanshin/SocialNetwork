@@ -22,18 +22,18 @@ const posts = (props) =>{
     }
 
     return(
-        <div className={s.content_posts}>
-            <div className={s.posts_add}>
-                <div className={s.posts_input}>
+        <div className={ s.content_posts }>
+            <div className={ s.posts_add }>
+                <div className={ s.posts_input }>
                     <input type="text" onChange={ onPostChange } value={state.newPostText}/>
                 </div>
-                <div className={s.posts_actions}>
+                <div className={ s.posts_actions }>
                     <button onClick={ addPost }>Send</button>
                     <button>Cancel</button>
                 </div>
             </div>
-            <div className={s.posts_collection}>
-                {postsElements}
+            <div className={ s.posts_collection }>
+                { postsElements }
             </div>
         </div>
     )
