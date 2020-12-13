@@ -1,21 +1,28 @@
 import React from 'react';
-import s from './friends_content.module.css';
-import * as axios from 'axios';
-import userPhoto from '../../assets/images/default_user_image.png';
+import s from "./friends_content.module.css";
+import userPhoto from "../../assets/images/default_user_image.png";
 
-class friends_content extends React.Component {
+const friends_content = (props) => {
 
-    componentDidMount() {
-        axios.get("https://social-network.samuraijs.com/api/1.0/users").then(response => {
-            this.props.setUsers(response.data.items);
-        });
+    let pagesCount = Math.ceil(props.totalUserCount/props.pageSize);
+
+    let pages = [];
+    for (let i = 1; i <= pagesCount; i++){
+        pages.push(i);
     }
 
-    render = () => {
-        return (
+    return (
+        <div className={s.friends_container}>
             <div>
                 {
-                    this.props.friendsCollection.map(u => <div key={u.id}>
+                    pages.map(p => {
+                        return <span className={props.currentPage === p ? s.selectedPage : ""}
+                                     onClick={(e) => { props.onPageChanged(p) }}>{p}</span>
+                    })
+                }
+            </div>
+            {
+                props.friendsCollection.map(u => <div key={u.id}>
                     <span>
                         <div>
                             <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.user_photo}
@@ -27,21 +34,20 @@ class friends_content extends React.Component {
                         <div>
                             {u.followed
                                 ? <button onClick={() => {
-                                    this.props.unFollow(u.id)
+                                    props.unFollow(u.id)
                                 }}>UnFollow</button>
                                 : <button onClick={() => {
-                                    this.props.Follow(u.id)
+                                    props.Follow(u.id)
                                 }}>Follow</button>}
                         </div>
                     </span>
-                        <span>
+                    <span>
                             <div>{u.status}</div>
                         </span>
-                    </div>)
-                }
-            </div>
-        );
-    }
-}
+                </div>)
+            }
+        </div>
+    );
+};
 
 export default friends_content;

@@ -1,7 +1,7 @@
 /*ScrollBar*/
 
 ::-webkit-scrollbar-button {
-    width:6px;
+    width:0px;
     height:0px
 }
 
@@ -18,12 +18,12 @@
 }
 
 ::-webkit-resizer{
-    width:5px;
+    width:0px;
     height:0px
 }
 
 ::-webkit-scrollbar{
-    width: 6px;
+    width: 0px;
 }
 
 /*Page styles*/
@@ -35,7 +35,7 @@ body li{
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 17fr 1fr;
+    grid-template-columns: 80px 17fr 1fr;
     grid-template-rows: 80px 8fr;
     grid-template-areas:
                     "nw ht mw"

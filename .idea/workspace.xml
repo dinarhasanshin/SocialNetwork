@@ -5,22 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/default_user_image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/preloader.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +22,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jyX76hGmH9Oa751wXmJ7NjG84a" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -127,7 +121,10 @@
       <workItem from="1607076125874" duration="18267000" />
       <workItem from="1607138306650" duration="7284000" />
       <workItem from="1607168320706" duration="478000" />
-      <workItem from="1607239281959" duration="10256000" />
+      <workItem from="1607239281959" duration="12754000" />
+      <workItem from="1607356913907" duration="1275000" />
+      <workItem from="1607408185281" duration="2335000" />
+      <workItem from="1607841211170" duration="18131000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -178,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607092564675</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Axis request added.">
+      <created>1607267542467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607267542467</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,13 +201,15 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Started official developing CubeFace social network" />
     <MESSAGE value="Upload to GitHub" />
     <MESSAGE value="Upload to GitHub_" />
     <MESSAGE value="Start adding container components" />
     <MESSAGE value="Start adding container components_" />
     <MESSAGE value="ContextAPI" />
-    <option name="LAST_COMMIT_MESSAGE" value="ContextAPI" />
+    <MESSAGE value="Axis request added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Axis request added." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

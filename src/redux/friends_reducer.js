@@ -1,18 +1,11 @@
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET-USERS';
+const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
+const SET_TOTAL_COUNT = 'SET-TOTAL-COUNT';
+const TOGGLE_IS_FETCHING = 'TOGGLE-IS-FETCHING';
 
 
-/*let initialState = {
-
-    UsersCollection: [],
-    Tabs: [
-        {AllUsers: 'AllUsers'},
-        {Friends: 'Friends'}
-    ],
-    ActiveTad: 'AllUsers'
-
-}*/
 let initialState = {
     friendsCollection:
         [
@@ -24,7 +17,11 @@ let initialState = {
                 status: null,
                 followed: false
             }*/
-        ]
+        ],
+    pageSize: 5,
+    totalUserCount: 0,
+    currentPage: 1,
+    isFetching: true
 }
 
 
@@ -53,8 +50,13 @@ const friends_reducer = (state = initialState, action) => {
                 })
             }
         case SET_USERS:
-            debugger;
-            return {...state, friendsCollection: [...state.friendsCollection, ...action.users]}
+            return {...state, friendsCollection: action.users}
+        case SET_CURRENT_PAGE:
+            return {...state, currentPage: action.currentPage}
+        case SET_TOTAL_COUNT:
+            return {...state, totalUserCount: action.totalUsersCount}
+        case TOGGLE_IS_FETCHING:
+            return {...state, isFetching: action.isFetching}
 
         default:
             return state;
@@ -62,11 +64,17 @@ const friends_reducer = (state = initialState, action) => {
 }
 
 
-export const followAC = (userId) => ({type: FOLLOW, userId})
+export const follow = (userId) => ({type: FOLLOW, userId})
 
-export const unFollowAC = (userId) => ({type: UNFOLLOW, userId})
+export const unFollow = (userId) => ({type: UNFOLLOW, userId})
 
-export const setUsersAC = (users) => ({type: SET_USERS, users})
+export const setUsers = (users) => ({type: SET_USERS, users})
+
+export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, currentPage})
+
+export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_COUNT, totalUsersCount})
+
+export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 
 
 export default friends_reducer;
