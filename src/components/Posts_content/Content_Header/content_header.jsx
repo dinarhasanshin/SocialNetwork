@@ -2,12 +2,14 @@ import React from 'react';
 import s from './content_header.module.css';
 import Photos from "../Photos/photos";
 
-const content_header = () =>{
+const content_header = (props) =>{
     return(
         <div className={s.content_header_top}>
             <div className={s.content_header}>
                 <div className={s.photo}>
-                    <p className={s.profile_photo}></p>
+                    {props.profile === null
+                        ? <p className={s.profile_photo}></p>
+                        : <img className={s.profile_photo} src={props.profile.photos.large}/>}
                 </div>
                 <div className={s.settings}>
                     <a href="/" className={s.edit_profile}>Edit profile</a>
@@ -16,7 +18,7 @@ const content_header = () =>{
             </div>
             <div className={s.content_photo}>
                 <div className={s.person_name}>
-                    <span className="Name">Dinar Hasanshin</span>
+                    <span className="Name">{props.profile === null ? props.profilePage.fullName : props.profile.fullName}</span>
                 </div>
                 <Photos/>
             </div>

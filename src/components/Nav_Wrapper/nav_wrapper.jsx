@@ -19,7 +19,7 @@ const nav_wrapper = () =>{
             <nav>
                 <ul>
                     <li>
-                        <NavLink to="/posts_content" activeClassName={s.active}><InlineIcon icon={profileIcon} width="23"/></NavLink>
+                        <NavLink to="/profile" activeClassName={s.active}><InlineIcon icon={profileIcon} width="23"/></NavLink>
                     </li>
                     <li>
                         <a href="/"><InlineIcon icon={newsIcon} width="23"/></a>

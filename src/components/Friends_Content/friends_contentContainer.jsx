@@ -19,7 +19,7 @@ class friends_contentContainer extends React.Component {
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
-                this.props.setTotalUsersCount(50);
+                this.props.setTotalUsersCount(400);
             });
     }
 
@@ -44,7 +44,7 @@ class friends_contentContainer extends React.Component {
                 : <FriendsContent totalUserCount={this.props.totalUserCount} pageSize={this.props.pageSize}
                              currentPage={this.props.currentPage} onPageChanged={this.onPageChanged}
                              friendsCollection={this.props.friendsCollection}
-                             Follow={this.props.Follow}
+                             follow={this.props.follow}
                              unFollow={this.props.unFollow}/>
             }
         </>

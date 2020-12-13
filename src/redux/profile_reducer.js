@@ -1,8 +1,13 @@
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_PROFILE = 'SET-PROFILE';
 
 
 let initialState = {
+
+    fullName: "Dinar Hasanshin",
+
+    profile: null,
 
     dataPerson: [
         {id: 1, name: "Age", meaning: 18},
@@ -43,6 +48,8 @@ const profile_reducer = (state = initialState, action) => {
                 ...state,
                 newPostText: action.newText
             };
+        case SET_PROFILE:
+            return {...state, profile: action.profile}
 
         default:
             return state;
@@ -55,6 +62,9 @@ export const addPostActionCreator = () => {
 }
 export const updateNewPostText = (text) => {
     return { type: UPDATE_NEW_POST_TEXT, newText: text }
+}
+export const setProfile = (profile) => {
+    return{ type: SET_PROFILE, profile}
 }
 
 

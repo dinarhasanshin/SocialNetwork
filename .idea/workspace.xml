@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/preloader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,7 @@
       <workItem from="1607239281959" duration="12754000" />
       <workItem from="1607356913907" duration="1275000" />
       <workItem from="1607408185281" duration="2335000" />
-      <workItem from="1607841211170" duration="18131000" />
+      <workItem from="1607841211170" duration="29121000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -182,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607267542467</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Refactor code and preloader added">
+      <created>1607867812461</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1607867812461</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +220,8 @@
     <MESSAGE value="Start adding container components_" />
     <MESSAGE value="ContextAPI" />
     <MESSAGE value="Axis request added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Axis request added." />
+    <MESSAGE value="Refactor code and preloader added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor code and preloader added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

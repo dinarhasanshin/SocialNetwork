@@ -1,6 +1,7 @@
 import React from 'react';
 import s from "./friends_content.module.css";
 import userPhoto from "../../assets/images/default_user_image.png";
+import {NavLink} from "react-router-dom";
 
 const friends_content = (props) => {
 
@@ -25,8 +26,10 @@ const friends_content = (props) => {
                 props.friendsCollection.map(u => <div key={u.id}>
                     <span>
                         <div>
-                            <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.user_photo}
-                                 alt="AvatarIcon"/>
+                            <NavLink to={"/profile/" + u.id}>
+                                <img src={u.photos.small != null ? u.photos.small : userPhoto} className={s.user_photo}
+                                     alt="AvatarIcon"/>
+                            </NavLink>
                         </div>
                         <span>
                             <div>{u.name}</div>
@@ -37,7 +40,7 @@ const friends_content = (props) => {
                                     props.unFollow(u.id)
                                 }}>UnFollow</button>
                                 : <button onClick={() => {
-                                    props.Follow(u.id)
+                                    props.follow(u.id)
                                 }}>Follow</button>}
                         </div>
                     </span>
