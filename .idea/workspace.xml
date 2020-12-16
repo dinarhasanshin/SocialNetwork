@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/auth_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/posts_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,21 +40,21 @@
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Friends_Content" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ReactLearning\react-social-network\src\components\Friends_Content" />
+      <recent name="D:\ReactLearning\react-social-network\src\components\Header" />
       <recent name="D:\ReactLearning\react-social-network\src\redux" />
+      <recent name="D:\ReactLearning\react-social-network\src\components\Friends_Content" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Messages_Content" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content\Posts" />
-      <recent name="D:\ReactLearning\react-social-network\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content" />
@@ -128,7 +126,11 @@
       <workItem from="1607239281959" duration="12754000" />
       <workItem from="1607356913907" duration="1275000" />
       <workItem from="1607408185281" duration="2335000" />
-      <workItem from="1607841211170" duration="29121000" />
+      <workItem from="1607841211170" duration="29859000" />
+      <workItem from="1607953038058" duration="4668000" />
+      <workItem from="1608034579259" duration="641000" />
+      <workItem from="1608047157111" duration="2760000" />
+      <workItem from="1608101522594" duration="149000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -193,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607867812461</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add &quot;withRouter&quot; and Refactor code.">
+      <created>1607880932966</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607880932966</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +230,8 @@
     <MESSAGE value="ContextAPI" />
     <MESSAGE value="Axis request added." />
     <MESSAGE value="Refactor code and preloader added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code and preloader added" />
+    <MESSAGE value="Add &quot;withRouter&quot; and Refactor code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;withRouter&quot; and Refactor code." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

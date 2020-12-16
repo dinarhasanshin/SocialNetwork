@@ -1,5 +1,16 @@
 .header_top{
     background-color: red;
     grid-area: ht;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
+
+}
+.login_block{
+    padding-right: 10px;
+}
+.login_block a{
+    text-decoration: none;
+    color: white;
 }
