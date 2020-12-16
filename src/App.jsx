@@ -1,5 +1,5 @@
 import React from "react";
-import Header from  '../src/components/Header/header';
+import HeaderContainer from  '../src/components/Header/headerContainer';
 import MessageWrapper from '../src/components/Message_Wrapper/message_wrapper';
 import NavWrapper from '../src/components/Nav_Wrapper/nav_wrapper';
 import ProfileContentContainer from './components/Posts_content/profile_contentContainer';
@@ -13,7 +13,7 @@ const App = (props) => {
     return (
         <BrowserRouter>
             <div className="container">
-                <Header/>
+                <HeaderContainer/>
                 <NavWrapper/>
                 <MessageWrapper/>
                 <Route path="/messages_content" render={() => <MessagesContentContainer/>}/>

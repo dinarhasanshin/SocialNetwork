@@ -18,7 +18,7 @@ const friends_content = (props) => {
                 {
                     pages.map(p => {
                         return <span className={props.currentPage === p ? s.selectedPage : ""}
-                                     onClick={(e) => { props.onPageChanged(p) }}>{p}</span>
+                                     onClick={ (e) => { props.onPageChanged(p) } }>{p}</span>
                     })
                 }
             </div>
@@ -36,12 +36,8 @@ const friends_content = (props) => {
                         </span>
                         <div>
                             {u.followed
-                                ? <button onClick={() => {
-                                    props.unFollow(u.id)
-                                }}>UnFollow</button>
-                                : <button onClick={() => {
-                                    props.follow(u.id)
-                                }}>Follow</button>}
+                                ? <button onClick={ (e) => { debugger; props.unFollow(u.id) } }>UnFollow</button>
+                                : <button onClick={ (e) => {  props.follow(u.id); debugger;} }>Follow</button>}
                         </div>
                     </span>
                     <span>

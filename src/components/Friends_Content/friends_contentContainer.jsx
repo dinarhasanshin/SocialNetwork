@@ -15,7 +15,8 @@ class friends_contentContainer extends React.Component {
 
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,
+            {withCredentials: true})
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
@@ -26,10 +27,42 @@ class friends_contentContainer extends React.Component {
     onPageChanged = (pageNumber) => {
         this.props.setCurrentPage(pageNumber)
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
+        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`,
+            {withCredentials: true})
             .then(response => {
                 this.props.toggleIsFetching(false);
                 this.props.setUsers(response.data.items);
+            });
+    }
+    onFollow = (userId) => {
+        debugger;
+        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/` + userId, {},
+            {
+                withCredentials: true,
+                headers:{
+                    "API-KEY" : "edee3bdd-3755-424a-b6b2-1bac360abd69"
+                }
+            })
+            .then(response => {
+                debugger;
+                if (response.data.resultCode === 0){
+                    this.props.follow(userId)
+                }
+            });
+    }
+    onUnFollow = (userId) => {
+        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/` + userId,
+            {
+                withCredentials: true,
+                headers:{
+                    "API-KEY" : "edee3bdd-3755-424a-b6b2-1bac360abd69"
+                }
+            })
+            .then(response => {
+                debugger;
+                if (response.data.resultCode === 0){
+                    this.props.unFollow(userId)
+                }
             });
     }
 
@@ -44,8 +77,8 @@ class friends_contentContainer extends React.Component {
                 : <FriendsContent totalUserCount={this.props.totalUserCount} pageSize={this.props.pageSize}
                              currentPage={this.props.currentPage} onPageChanged={this.onPageChanged}
                              friendsCollection={this.props.friendsCollection}
-                             follow={this.props.follow}
-                             unFollow={this.props.unFollow}/>
+                             follow={this.onFollow}
+                             unFollow={this.onUnFollow}/>
             }
         </>
     };
