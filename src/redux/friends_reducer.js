@@ -1,9 +1,12 @@
+import {act} from "@testing-library/react";
+
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
 const SET_USERS = 'SET-USERS';
 const SET_CURRENT_PAGE = 'SET-CURRENT-PAGE';
 const SET_TOTAL_COUNT = 'SET-TOTAL-COUNT';
 const TOGGLE_IS_FETCHING = 'TOGGLE-IS-FETCHING';
+const TOGGLE_IS_FOLLOWING = 'TOGGLE-IS-FOLLOWING';
 
 
 let initialState = {
@@ -21,7 +24,8 @@ let initialState = {
     pageSize: 5,
     totalUserCount: 0,
     currentPage: 1,
-    isFetching: true
+    isFetching: true,
+    isFollowing: []
 }
 
 
@@ -57,6 +61,12 @@ const friends_reducer = (state = initialState, action) => {
             return {...state, totalUserCount: action.totalUsersCount}
         case TOGGLE_IS_FETCHING:
             return {...state, isFetching: action.isFetching}
+        case TOGGLE_IS_FOLLOWING:
+            return {...state,
+                isFollowing: action.isFetching
+                    ? [...state.isFollowing, action.userId]
+                    : state.isFollowing.filter(id => id !== action.userId)}
+
 
         default:
             return state;
@@ -75,6 +85,8 @@ export const setCurrentPage = (currentPage) => ({type: SET_CURRENT_PAGE, current
 export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_COUNT, totalUsersCount})
 
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
+
+export const toggleIsFollowing = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING, isFetching, userId})
 
 
 export default friends_reducer;

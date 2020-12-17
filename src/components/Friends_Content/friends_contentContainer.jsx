@@ -3,23 +3,23 @@ import {
     follow,
     setCurrentPage,
     setTotalUsersCount,
-    setUsers, toggleIsFetching,
+    setUsers, toggleIsFetching, toggleIsFollowing,
     unFollow
 } from '../../redux/friends_reducer';
 import {connect} from "react-redux";
 import * as axios from "axios";
 import FriendsContent from "./friends_content";
 import s from './friends_content.module.css'
+import {usersAPI} from "../../api/api";
 
 class friends_contentContainer extends React.Component {
 
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`,
-            {withCredentials: true})
-            .then(response => {
+
+        usersAPI.getUsers(this.props.currentPage, this.props.pageSize).then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
+                this.props.setUsers(data.items);
                 this.props.setTotalUsersCount(400);
             });
     }
@@ -27,41 +27,26 @@ class friends_contentContainer extends React.Component {
     onPageChanged = (pageNumber) => {
         this.props.setCurrentPage(pageNumber)
         this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`,
-            {withCredentials: true})
-            .then(response => {
+            usersAPI.getUsers(pageNumber, this.props.pageSize).then(data => {
                 this.props.toggleIsFetching(false);
-                this.props.setUsers(response.data.items);
+                this.props.setUsers(data.items);
             });
     }
     onFollow = (userId) => {
-        debugger;
-        axios.post(`https://social-network.samuraijs.com/api/1.0/follow/` + userId, {},
-            {
-                withCredentials: true,
-                headers:{
-                    "API-KEY" : "edee3bdd-3755-424a-b6b2-1bac360abd69"
-                }
-            })
-            .then(response => {
-                debugger;
-                if (response.data.resultCode === 0){
-                    this.props.follow(userId)
+        this.props.toggleIsFollowing(true, userId);
+        usersAPI.follow(userId).then(data => {
+                if (data.resultCode === 0){
+                    this.props.toggleIsFollowing(false, userId);
+                    this.props.follow(userId);
                 }
             });
     }
     onUnFollow = (userId) => {
-        axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/` + userId,
-            {
-                withCredentials: true,
-                headers:{
-                    "API-KEY" : "edee3bdd-3755-424a-b6b2-1bac360abd69"
-                }
-            })
-            .then(response => {
-                debugger;
-                if (response.data.resultCode === 0){
-                    this.props.unFollow(userId)
+        this.props.toggleIsFollowing(true, userId);
+         usersAPI.unFollow(userId).then(data => {
+                if (data.resultCode === 0){
+                    this.props.toggleIsFollowing(false, userId);
+                    this.props.unFollow(userId);
                 }
             });
     }
@@ -78,7 +63,7 @@ class friends_contentContainer extends React.Component {
                              currentPage={this.props.currentPage} onPageChanged={this.onPageChanged}
                              friendsCollection={this.props.friendsCollection}
                              follow={this.onFollow}
-                             unFollow={this.onUnFollow}/>
+                             unFollow={this.onUnFollow} isFollowing={this.props.isFollowing}/>
             }
         </>
     };
@@ -90,10 +75,11 @@ let mapStateToProps = (state) => {
         pageSize: state.friendsPage.pageSize,
         totalUserCount: state.friendsPage.totalUserCount,
         currentPage: state.friendsPage.currentPage,
-        isFetching: state.friendsPage.isFetching
+        isFetching: state.friendsPage.isFetching,
+        isFollowing: state.friendsPage.isFollowing
     }
 }
 
 
 export default connect(mapStateToProps,
-    { follow, unFollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching })(friends_contentContainer);
+    { follow, unFollow, setUsers, setCurrentPage, setTotalUsersCount, toggleIsFetching, toggleIsFollowing })(friends_contentContainer);

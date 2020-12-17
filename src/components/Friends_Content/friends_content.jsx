@@ -36,8 +36,9 @@ const friends_content = (props) => {
                         </span>
                         <div>
                             {u.followed
-                                ? <button onClick={ (e) => { debugger; props.unFollow(u.id) } }>UnFollow</button>
-                                : <button onClick={ (e) => {  props.follow(u.id); debugger;} }>Follow</button>}
+                                ? <button className={props.isFollowing.some(id => id === u.id) ? s.disable : s.active} onClick={ (e) => { props.unFollow(u.id) } }>UnFollow</button>
+                                : <button className={props.isFollowing.some(id => id === u.id)  ? s.disable : s.active} onClick={ (e) => {  props.follow(u.id) } }>Follow</button>
+                            }
                         </div>
                     </span>
                     <span>

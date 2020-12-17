@@ -15,6 +15,12 @@
     display: flex;
     margin: 0 auto;
 }
+.active{
+    background-color: green;
+}
+.disable{
+    background-color: red;
+}
 
 .ldsCircle {
     display: flex;

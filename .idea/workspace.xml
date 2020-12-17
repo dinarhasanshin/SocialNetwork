@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="">
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Added follow/unFollow API">
+      <change afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -129,7 +137,9 @@
       <workItem from="1608047157111" duration="2760000" />
       <workItem from="1608101522594" duration="149000" />
       <workItem from="1608131996579" duration="602000" />
-      <workItem from="1608145528314" duration="6373000" />
+      <workItem from="1608145528314" duration="6762000" />
+      <workItem from="1608192637847" duration="5373000" />
+      <workItem from="1608223636390" duration="5983000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -201,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607880932966</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added follow/unFollow API">
+      <created>1608152155940</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608152155940</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +247,8 @@
     <MESSAGE value="Axis request added." />
     <MESSAGE value="Refactor code and preloader added" />
     <MESSAGE value="Add &quot;withRouter&quot; and Refactor code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add &quot;withRouter&quot; and Refactor code." />
+    <MESSAGE value="Added follow/unFollow API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added follow/unFollow API" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
