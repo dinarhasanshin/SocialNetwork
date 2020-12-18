@@ -5,6 +5,7 @@ import ProfileInfo from './ProfileInfo/profile_info';
 import s from './profile_content.module.css';
 
 const profile_content = (props) =>{
+
     return(
         <section className={ s.content }>
             <ContentHeader profilePage={props.profilePage} profile={props.profile}/>

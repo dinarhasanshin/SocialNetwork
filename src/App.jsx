@@ -5,6 +5,7 @@ import NavWrapper from '../src/components/Nav_Wrapper/nav_wrapper';
 import ProfileContentContainer from './components/Posts_content/profile_contentContainer';
 import MessagesContentContainer from '../src/components/Messages_Content/message_contentContainer';
 import FriendsContentContainer from '../src/components/Friends_Content/friends_contentContainer';
+import Login from '../src/components/Login/login';
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom";
 
@@ -21,6 +22,8 @@ const App = (props) => {
                 <Route path="/profile/:userId?" render={() => <ProfileContentContainer/>}/>
 
                 <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>
+
+                <Route path="/login" render={() => <Login/>}/>
             </div>
         </BrowserRouter>
     );
