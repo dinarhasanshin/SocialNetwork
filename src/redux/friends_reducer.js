@@ -1,4 +1,4 @@
-import {act} from "@testing-library/react";
+import {usersAPI} from "../api/api";
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -12,14 +12,14 @@ const TOGGLE_IS_FOLLOWING = 'TOGGLE-IS-FOLLOWING';
 let initialState = {
     friendsCollection:
         [
-/*            {
-                name: "YEVHEN01",
-                id: 13121,
-                uniqueUrlName: null,
-                photos: {small: null, large: null},
-                status: null,
-                followed: false
-            }*/
+            /*            {
+                            name: "YEVHEN01",
+                            id: 13121,
+                            uniqueUrlName: null,
+                            photos: {small: null, large: null},
+                            status: null,
+                            followed: false
+                        }*/
         ],
     pageSize: 5,
     totalUserCount: 0,
@@ -62,10 +62,12 @@ const friends_reducer = (state = initialState, action) => {
         case TOGGLE_IS_FETCHING:
             return {...state, isFetching: action.isFetching}
         case TOGGLE_IS_FOLLOWING:
-            return {...state,
+            return {
+                ...state,
                 isFollowing: action.isFetching
                     ? [...state.isFollowing, action.userId]
-                    : state.isFollowing.filter(id => id !== action.userId)}
+                    : state.isFollowing.filter(id => id !== action.userId)
+            }
 
 
         default:
@@ -87,6 +89,44 @@ export const setTotalUsersCount = (totalUsersCount) => ({type: SET_TOTAL_COUNT, 
 export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 
 export const toggleIsFollowing = (isFetching, userId) => ({type: TOGGLE_IS_FOLLOWING, isFetching, userId})
+
+export const getUsers = (currentPage, pageSize) => {
+    return (dispatch) => {
+
+        dispatch(setCurrentPage(currentPage));
+        dispatch(toggleIsFetching(true));
+
+        usersAPI.getUsers(currentPage, pageSize).then(data => {
+            dispatch(toggleIsFetching(false));
+            dispatch(setUsers(data.items));
+            dispatch(setTotalUsersCount(400));
+        });
+    }
+}
+
+export const userFollow = (userId) => {
+    return (dispatch) => {
+        dispatch(toggleIsFollowing(true, userId));
+        usersAPI.follow(userId).then(data => {
+            if (data.resultCode === 0){
+                dispatch(toggleIsFollowing(false, userId));
+                dispatch(follow(userId));
+            }
+        });
+    }
+}
+
+export const userUnFollow = (userId) => {
+    return (dispatch) => {
+        dispatch(toggleIsFollowing(true, userId));
+        usersAPI.unFollow(userId).then(data => {
+            if (data.resultCode === 0){
+                dispatch(toggleIsFollowing(false, userId));
+                dispatch(unFollow(userId));
+            }
+        });
+    }
+}
 
 
 export default friends_reducer;
