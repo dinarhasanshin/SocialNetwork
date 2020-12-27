@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Added redux-thunk part_1">
-      <change afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login/login.module.css" afterDir="false" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Added redux-thunk part_2, base logging">
+      <change afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +68,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -80,11 +78,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="npm.start" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -146,6 +139,13 @@
       <workItem from="1608223636390" duration="6131000" />
       <workItem from="1608284716260" duration="7201000" />
       <workItem from="1608299975220" duration="7304000" />
+      <workItem from="1608314687747" duration="111000" />
+      <workItem from="1608379860534" duration="640000" />
+      <workItem from="1608444034800" duration="33000" />
+      <workItem from="1608478418620" duration="1443000" />
+      <workItem from="1608618909451" duration="1642000" />
+      <workItem from="1609003237915" duration="2835000" />
+      <workItem from="1609056118535" duration="4918000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -238,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608291795198</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added redux-thunk part_2, base logging">
+      <created>1608314780804</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1608314780804</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +277,8 @@
     <MESSAGE value="Added follow/unFollow API" />
     <MESSAGE value="Added DAL(Data Access Layer)" />
     <MESSAGE value="Added redux-thunk part_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redux-thunk part_1" />
+    <MESSAGE value="Added redux-thunk part_2, base logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added redux-thunk part_2, base logging" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

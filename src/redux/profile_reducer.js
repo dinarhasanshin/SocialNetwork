@@ -51,7 +51,6 @@ const profile_reducer = (state = initialState, action) => {
                 newPostText: action.newText
             };
         case SET_PROFILE:
-            debugger;
             return {...state, profile: action.profile}
 
         default:
@@ -60,7 +59,7 @@ const profile_reducer = (state = initialState, action) => {
 }
 
 
-export const addPostActionCreator = () => {
+export const addPost = () => {
     return { type: ADD_POST }
 }
 export const updateNewPostText = (text) => {

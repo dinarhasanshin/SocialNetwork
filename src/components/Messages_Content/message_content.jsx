@@ -29,11 +29,7 @@ const message_content = (props) => {
 
     let onMessageChange = (e) => {
         let text = e.target.value;
-        props.onMessageChange(text)
-    }
-
-    if (!props.isAuth) {
-        return <Redirect to={"/login"}/>
+        props.updateNewMessageText(text)
     }
 
     return (

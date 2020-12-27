@@ -3,6 +3,8 @@ import {getUsers, userFollow, userUnFollow} from '../../redux/friends_reducer';
 import {connect} from "react-redux";
 import FriendsContent from "./friends_content";
 import s from './friends_content.module.css'
+import {compose} from "redux";
+import withAuthRedirect from "../../hoc/withAuthRedirect";
 
 class friends_contentContainer extends React.Component {
 
@@ -52,5 +54,7 @@ let mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps,
-    {getUsers, userFollow, userUnFollow})(friends_contentContainer);
+export default compose(
+    connect(mapStateToProps, {getUsers, userFollow, userUnFollow}),
+    withAuthRedirect
+)(friends_contentContainer);
