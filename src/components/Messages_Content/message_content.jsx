@@ -2,10 +2,6 @@ import React from 'react';
 import s from './message_content.module.css';
 import DialogItem from './Dialog_Item/dialog_item';
 import MessagesItem from './Messages_Item/messages_item';
-import {Redirect} from 'react-router-dom';
-
-
-
 
 
 const message_content = (props) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './content_header.module.css';
-import Photos from "../Photos/photos";
+import ProfileStatus from "./Profile_Status/profile_status";
 
 const content_header = (props) =>{
     return(
@@ -12,15 +12,15 @@ const content_header = (props) =>{
                         : <img className={s.profile_photo} src={props.profile.photos.large}/>}
                 </div>
                 <div className={s.settings}>
-                    <a href="/" className={s.edit_profile}>Edit profile</a>
-                    <a href="/" className={s.profile_settings}>Profile settings</a>
+{/*                    <a href="/" className={s.edit_profile}>Edit profile</a>
+                    <a href="/" className={s.profile_settings}>Profile settings</a>*/}
+                    <ProfileStatus status={"Hello my friends!"}/>
                 </div>
             </div>
             <div className={s.content_photo}>
                 <div className={s.person_name}>
                     <span className="Name">{props.profile === null ? props.profilePage.fullName : props.profile.fullName}</span>
                 </div>
-                <Photos/>
             </div>
         </div>
     )

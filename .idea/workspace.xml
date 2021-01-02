@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Added redux-thunk part_2, base logging">
-      <change afterPath="$PROJECT_DIR$/src/hoc/withAuthRedirect.js" afterDir="false" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Finish AuthRedirect and using compose">
+      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1jyX76hGmH9Oa751wXmJ7NjG84a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -145,7 +152,10 @@
       <workItem from="1608478418620" duration="1443000" />
       <workItem from="1608618909451" duration="1642000" />
       <workItem from="1609003237915" duration="2835000" />
-      <workItem from="1609056118535" duration="4918000" />
+      <workItem from="1609056118535" duration="5009000" />
+      <workItem from="1609332128518" duration="1209000" />
+      <workItem from="1609584262778" duration="21000" />
+      <workItem from="1609585238940" duration="7811000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -245,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608314780804</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Finish AuthRedirect and using compose">
+      <created>1609061629103</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1609061629145</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +295,8 @@
     <MESSAGE value="Added DAL(Data Access Layer)" />
     <MESSAGE value="Added redux-thunk part_1" />
     <MESSAGE value="Added redux-thunk part_2, base logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redux-thunk part_2, base logging" />
+    <MESSAGE value="Finish AuthRedirect and using compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish AuthRedirect and using compose" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
