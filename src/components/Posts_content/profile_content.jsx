@@ -8,7 +8,8 @@ const profile_content = (props) =>{
 
     return(
         <section className={ s.content }>
-            <ContentHeader profilePage={props.profilePage} profile={props.profile}/>
+            <ContentHeader profilePage={ props.profilePage } profile={ props.profile }
+                           status={ props.status } updateUserStatus={ props.updateUserStatus }/>
             <div className={ s.content_data }>
                 <div className={ s.data_connections }>
                     <ProfileInfo data={ props.profilePage.dataPerson }/>

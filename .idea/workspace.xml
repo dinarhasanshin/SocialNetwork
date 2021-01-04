@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Finish AuthRedirect and using compose">
-      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" afterDir="false" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Add status and edit status">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/Photo/photo.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Photos/photos.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +155,9 @@
       <workItem from="1609056118535" duration="5009000" />
       <workItem from="1609332128518" duration="1209000" />
       <workItem from="1609584262778" duration="21000" />
-      <workItem from="1609585238940" duration="7811000" />
+      <workItem from="1609585238940" duration="8183000" />
+      <workItem from="1609758843815" duration="9542000" />
+      <workItem from="1609783642463" duration="2566000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -262,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609061629145</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add status and edit status">
+      <created>1609603652555</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1609603652563</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +305,8 @@
     <MESSAGE value="Added redux-thunk part_1" />
     <MESSAGE value="Added redux-thunk part_2, base logging" />
     <MESSAGE value="Finish AuthRedirect and using compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish AuthRedirect and using compose" />
+    <MESSAGE value="Add status and edit status" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add status and edit status" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

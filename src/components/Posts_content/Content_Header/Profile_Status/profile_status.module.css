@@ -8,3 +8,8 @@
 .profile_status div:first-child{
     margin-right: 20px;
 }
+.profile_status_input{
+    width: 100px;
+    height: 20px;
+    background-color: red;
+}

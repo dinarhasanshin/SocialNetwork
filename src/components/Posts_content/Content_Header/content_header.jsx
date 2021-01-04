@@ -14,7 +14,7 @@ const content_header = (props) =>{
                 <div className={s.settings}>
 {/*                    <a href="/" className={s.edit_profile}>Edit profile</a>
                     <a href="/" className={s.profile_settings}>Profile settings</a>*/}
-                    <ProfileStatus status={"Hello my friends!"}/>
+                    <ProfileStatus status={ props.status } updateUserStatus={ props.updateUserStatus }/>
                 </div>
             </div>
             <div className={s.content_photo}>
