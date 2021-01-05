@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './profile_status.module.css';
-import {profileAPI} from "../../../../api/api";
 
 
 class profile_Status extends React.Component {
@@ -9,6 +8,15 @@ class profile_Status extends React.Component {
         editMode: false,
         status: this.props.status
     };
+
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.status !== this.props.status){
+            this.setState({
+                status: this.props.status
+            })
+        }
+    }
 
 
     activatedEditMode = () => {
@@ -46,6 +54,6 @@ class profile_Status extends React.Component {
     }
 
 
-};
+}
 
 export default profile_Status;

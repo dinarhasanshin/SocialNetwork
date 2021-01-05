@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Add status and edit status">
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/validators/validators.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +49,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectId" id="1jyX76hGmH9Oa751wXmJ7NjG84a" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -60,6 +75,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="ts.external.directory.path" value="D:\Programs\JetBrains\apps\WebStorm\ch-0\203.6682.155\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -157,7 +173,10 @@
       <workItem from="1609584262778" duration="21000" />
       <workItem from="1609585238940" duration="8183000" />
       <workItem from="1609758843815" duration="9542000" />
-      <workItem from="1609783642463" duration="2566000" />
+      <workItem from="1609783642463" duration="4874000" />
+      <workItem from="1609833858208" duration="2881000" />
+      <workItem from="1609844084162" duration="2880000" />
+      <workItem from="1609851947740" duration="9501000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -271,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609603652563</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Add status and edit status">
+      <created>1609791079925</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1609791079925</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

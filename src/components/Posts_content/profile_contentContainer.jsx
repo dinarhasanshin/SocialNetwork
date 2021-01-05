@@ -16,6 +16,15 @@ class ProfileContentContainer extends React.Component {
 
         this.props.getUserStatus(userId);
     }
+/*    componentDidUpdate(prevProps, prevState) {
+
+        let userId = this.props.match.params.userId
+        if(!userId) {
+            userId = this.props.userId
+        }
+        this.props.setUserProfile(userId);
+        this.props.getUserStatus(userId);
+    }*/
 
     render() {
         return(

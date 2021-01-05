@@ -1,0 +1,7 @@
+.error input{
+    border: 1px solid yellow;
+}
+.warn span{
+    font-size: 20px;
+    color: green;
+}
