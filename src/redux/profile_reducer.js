@@ -47,7 +47,8 @@ const profile_reducer = (state = initialState, action) => {
             return {...state, profile: action.profile}
 
         case SET_STATUS:
-            if(action.status === null){
+            debugger
+            if(action.status === null || action.status === ""){
                 return {...state, status: "Write your status!"}
 
             }else{
@@ -73,6 +74,7 @@ export const setUserProfile = (userId) => (dispatch) => {
 
 
 export const getUserStatus = (userId) => (dispatch) => {
+    debugger
         profileAPI.getStatus(userId).then(data => {
             dispatch(setStatus(data));
         });

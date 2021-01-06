@@ -4,25 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Add status and edit status">
-      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/FormsControl.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/validators/validators.js" afterDir="false" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Add form-validations and login/logout options">
+      <change afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_statusWithHooks.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/app_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_content.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Login/login.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/auth_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
     </list>
@@ -69,7 +63,7 @@
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Header" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -80,11 +74,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Work\React_Projects\react-social-network\src\components\Posts_content\Content_Header\Profile_Status" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Header" />
       <recent name="D:\ReactLearning\react-social-network\src\redux" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Friends_Content" />
       <recent name="D:\ReactLearning\react-social-network\src\components\Messages_Content" />
-      <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content\Posts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content" />
@@ -176,7 +170,9 @@
       <workItem from="1609783642463" duration="4874000" />
       <workItem from="1609833858208" duration="2881000" />
       <workItem from="1609844084162" duration="2880000" />
-      <workItem from="1609851947740" duration="9501000" />
+      <workItem from="1609851947740" duration="9621000" />
+      <workItem from="1609878587321" duration="1996000" />
+      <workItem from="1609911629026" duration="12300000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -297,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609791079925</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add form-validations and login/logout options">
+      <created>1609862219610</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1609862219610</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +335,8 @@
     <MESSAGE value="Added redux-thunk part_2, base logging" />
     <MESSAGE value="Finish AuthRedirect and using compose" />
     <MESSAGE value="Add status and edit status" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add status and edit status" />
+    <MESSAGE value="Add form-validations and login/logout options" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add form-validations and login/logout options" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

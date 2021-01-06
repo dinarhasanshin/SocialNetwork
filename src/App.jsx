@@ -7,26 +7,50 @@ import MessagesContentContainer from '../src/components/Messages_Content/message
 import FriendsContentContainer from '../src/components/Friends_Content/friends_contentContainer';
 import Login from '../src/components/Login/login';
 import './App.css';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {connect} from "react-redux";
+import {compose} from "redux";
+import {initializeApp} from "./redux/app_reducer";
 
 
-const App = (props) => {
-    return (
-        <BrowserRouter>
-            <div className="container">
-                <HeaderContainer/>
-                <NavWrapper/>
-                <MessageWrapper/>
-                <Route path="/messages_content" render={() => <MessagesContentContainer/>}/>
+class App extends React.Component {
 
-                <Route path="/profile/:userId?" render={() => <ProfileContentContainer/>}/>
+    componentDidMount() {
+        this.props.initializeApp();
+    }
 
-                <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>
+    render() {
 
-                <Route path="/login" render={() => <Login/>}/>
-            </div>
-        </BrowserRouter>
-    );
+        if(!this.props.initialized){
+            debugger
+            return <p>Loading...</p>
+        }
+        return (
+            <BrowserRouter>
+                <div className="container">
+                    <HeaderContainer/>
+                    <NavWrapper/>
+                    <MessageWrapper/>
+                    <Route path="/messages_content" render={() => <MessagesContentContainer/>}/>
+
+                    <Route path="/profile/:userId?" render={() => <ProfileContentContainer/>}/>
+
+                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>
+
+                    <Route path="/login" render={() => <Login/>}/>
+                </div>
+            </BrowserRouter>
+        );
+    }
 }
 
-export default App;
+let mapStateToProps = (state) => {
+    return{
+        initialized: state.app.initialized
+    }
+}
+
+export default compose(
+    withRouter,
+    connect(mapStateToProps, {initializeApp}))
+    (App);

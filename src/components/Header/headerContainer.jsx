@@ -6,9 +6,9 @@ import {authLogout, userAuth} from "../../redux/auth_reducer";
 
 class headerContainer extends React.Component{
 
-    componentDidMount() {
+/*    componentDidMount() {
             this.props.userAuth();
-    }
+    }*/
     render() {
         return (
             <Header {...this.props}/>
