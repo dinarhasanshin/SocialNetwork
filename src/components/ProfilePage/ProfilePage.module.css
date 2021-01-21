@@ -1,0 +1,50 @@
+.profile_content{
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    grid-template-areas:
+            "pl pr";
+}
+.profile_content_block{
+    margin: 16px 6px 6px 6px;
+    border-radius: 6px;
+    background-color: orangered;
+}
+.profile_left{
+    grid-area: pl;
+    background-color: yellow;
+}
+.profile_photo{
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+}
+.photo_item{
+    margin: 0 auto;
+    width: 207px;
+    height: 207px;
+    background-color: green;
+}
+.photo_edit_btn{
+    outline: none;
+    width: 180px;
+    border-radius: 12px;
+    border: 0px;
+    margin: 14px auto 0px auto;
+}
+.photo_edit_btn:hover{
+    cursor: pointer;
+}
+.profile_right{
+    grid-area: pr;
+    background-color: darkgoldenrod;
+}
+.profile_data{
+    padding: 14px;
+}
+.data_header p{
+    padding: 0;
+    margin: 0;
+}
+.data_header p:first-child{
+    font-size: 20px;
+}

@@ -1,0 +1,85 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+    grid-area: h;
+}
+.header p{
+    margin: 0;
+}
+.header_logo{
+    padding: 10px;
+    background-color: peru;
+    border-radius: 10px;
+}
+.header_auth{
+    align-items: center;
+    background-color: pink;
+    display: flex;
+}
+.header_auth:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.auth_name{
+    padding-right: 5px;
+}
+.auth_img{
+    width: 32px;
+    height: 32px;
+    background-color: orange;
+    border-radius: 50%;
+}
+.logOutMenu{
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 852.5px;
+    width: 112.7px;
+    height: 40px;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.logOutMenu:hover{
+    background-color: cyan;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.header_top{
+    background-color: red;
+    grid-area: ht;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+
+}
+.login_block{
+    padding-right: 10px;
+}
+.login_block a{
+    text-decoration: none;
+    color: white;
+}*/

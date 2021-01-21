@@ -1,0 +1,29 @@
+.nav_wrapper{
+    grid-area: nw;
+    background-color: #8224e3;
+}
+.nav_wrapper nav ul {
+    padding: 1px;
+}
+.nav_wrapper nav ul li {
+    list-style: none;
+}
+.nav_wrapper nav ul li a{
+    text-decoration: none;
+    font-size: 17px;
+    display: flex;
+    align-content: center;
+    height: 100%;
+    color: black;
+    padding: 5px;
+}
+.nav_wrapper nav ul li a:hover{
+    background-color: red;
+    border: 0px solid red;
+    border-radius: 5px;
+}
+.nav_icons{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}

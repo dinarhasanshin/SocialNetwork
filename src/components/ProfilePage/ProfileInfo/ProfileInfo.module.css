@@ -1,0 +1,26 @@
+.data_contacts ul{
+    margin: 0;
+    padding: 0;
+}
+.data_contacts ul li {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas:
+            "sp a";
+    margin: 2px 0;
+}
+.data_contacts ul li span{
+    grid-area: sp;
+}
+.data_contacts ul li a{
+    grid-area: a;
+}
+.data_contacts_header{
+    display: flex;
+    margin: 20px 0 15px 0;
+}
+.data_contacts_header hr {
+    width: 100%;
+    margin-left: 2px;
+
+}

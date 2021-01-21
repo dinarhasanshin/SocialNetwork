@@ -30,35 +30,31 @@ export const setAuthUserData = (id, login, email, isAuth) => {
     return { type: SET_USER_DATA, data: { id, login, email, isAuth } }
 }
 
-export const userAuth = () => (dispatch) => {
-    return authAPI.getAuth().then(data => {
-            if (data.resultCode === 0) {
-                let {id, login, email} = data.data;
-                dispatch(setAuthUserData(id, login, email, true));
-            }
-        });
+export const userAuth = () => async (dispatch) => {
+    let data = await authAPI.getAuth();
 
-    }
-
-export const authLogin = (email, password, rememberMe) => {
-    return (dispatch) => {
-        authAPI.login(email, password, rememberMe).then(data => {
-            if (data.resultCode === 0){
-                dispatch(userAuth())
-            } else{
-                let message = data.messages.length > 0 ? data.messages[0] : "Some error";
-                dispatch(stopSubmit("login", {_error: message}));
-            }
-        });
+    if (data.resultCode === 0) {
+        let {id, login, email} = data.data;
+        dispatch(setAuthUserData(id, login, email, true));
     }
 }
-export const authLogout = (email, password, rememberMe) => {
-    return (dispatch) => {
-        authAPI.logout().then(data => {
-            if (data.resultCode === 0){
-                dispatch(setAuthUserData(null, null, null, false));
-            }
-        });
+
+export const authLogin = (email, password, rememberMe) => async (dispatch) => {
+    let data = await authAPI.login(email, password, rememberMe)
+
+    if (data.resultCode === 0){
+        dispatch(userAuth())
+    } else{
+        let message = data.messages.length > 0 ? data.messages[0] : "Some error";
+        dispatch(stopSubmit("login", {_error: message}));
+    }
+
+}
+export const authLogout = (email, password, rememberMe) => async (dispatch) => {
+    let data = await authAPI.logout();
+
+    if (data.resultCode === 0){
+        dispatch(setAuthUserData(null, null, null, false));
     }
 }
 

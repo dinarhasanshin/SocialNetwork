@@ -1,16 +1,14 @@
 import React from "react";
-import HeaderContainer from  '../src/components/Header/headerContainer';
-import MessageWrapper from '../src/components/Message_Wrapper/message_wrapper';
-import NavWrapper from '../src/components/Nav_Wrapper/nav_wrapper';
-import ProfileContentContainer from './components/Posts_content/profile_contentContainer';
-import MessagesContentContainer from '../src/components/Messages_Content/message_contentContainer';
-import FriendsContentContainer from '../src/components/Friends_Content/friends_contentContainer';
+import HeaderContainer from './components/Header/HeaderContainer';
 import Login from '../src/components/Login/login';
-import './App.css';
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app_reducer";
+import './App.css';
+import ProfilePageContainer from "./components/ProfilePage/ProfilePageContainer";
+import NavWrapper from "./components/NavWrapper/NavWrapper";
+import PeoplesPageContainer from "./components/PeoplesPage/PeoplesPageContainer";
 
 
 class App extends React.Component {
@@ -22,7 +20,6 @@ class App extends React.Component {
     render() {
 
         if(!this.props.initialized){
-            debugger
             return <p>Loading...</p>
         }
         return (
@@ -30,12 +27,11 @@ class App extends React.Component {
                 <div className="container">
                     <HeaderContainer/>
                     <NavWrapper/>
-                    <MessageWrapper/>
-                    <Route path="/messages_content" render={() => <MessagesContentContainer/>}/>
+                    <Route path="/peoples" render={() => <PeoplesPageContainer/>}/>
 
-                    <Route path="/profile/:userId?" render={() => <ProfileContentContainer/>}/>
+                    <Route path="/profile/:userId?" render={() => <ProfilePageContainer/>}/>
 
-                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>
+{/*                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>*/}
 
                     <Route path="/login" render={() => <Login/>}/>
                 </div>

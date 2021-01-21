@@ -11,24 +11,17 @@ let initialState = {
 
     profile: null,
 
-    dataPerson: [
-        {id: 1, name: "Age", meaning: 18},
-        {id: 2, name: "Gender", meaning: "Male"},
+    dataContacts: [
+        {id: 1, type: "GitHub" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 2, type: "Vk" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 3, type: "Facebook" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 4, type: "Instagram" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 5, type: "Twitter" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 6, type: "YouTube" , value: "\"http://www.youtube.com/staryi_channel_84\""},
+        {id: 6, type: "WebSite" , value: "\"http://www.youtube.com/staryi_channel_84\""},
     ],
-    dataLocation: [
-        {id: 3, name: "City", meaning: "Samara"},
-        {id: 4, name: "Country", meaning: "Russia"}
-    ],
-    dataSocial: [
-        {id: 1, name: "Groups", meaning: 7},
-        {id: 2, name: "Friends", meaning: 12},
-    ],
+
     postsCollection: [
-        {id: 1, message: 'This is my first post'},
-        {id: 2, message: 'Great weather'},
-        {id: 3, message: 'Beautiful street!'},
-        {id: 4, message: 'My name is Dinar'},
-        {id: 5, message: 'Hey, what is your health?'}
     ],
     status: ""
 }
@@ -41,13 +34,13 @@ const profile_reducer = (state = initialState, action) => {
             return {
                 ...state,
                 newPostText: '',
-                postsCollection: [...state.postsCollection, {id: 6, message: action.newPostText}]
+                //TODO: Сделать нормальную привязку имени к постам!!!
+                postsCollection: [...state.postsCollection, {id: 6, message: action.newPostText, username: state.profile.fullName}]
             };
         case SET_PROFILE:
             return {...state, profile: action.profile}
 
         case SET_STATUS:
-            debugger
             if(action.status === null || action.status === ""){
                 return {...state, status: "Write your status!"}
 
@@ -66,27 +59,28 @@ export const setProfile = (profile) => ({type: SET_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
 
 
-export const setUserProfile = (userId) => (dispatch) => {
-        usersAPI.getProfile(userId).then(data => {
-            dispatch(setProfile(data));
-        });
-    }
+export const setUserProfile = (userId) => async (dispatch) => {
+    let data = await usersAPI.getProfile(userId)
+
+    dispatch(setProfile(data));
+
+}
 
 
-export const getUserStatus = (userId) => (dispatch) => {
-    debugger
-        profileAPI.getStatus(userId).then(data => {
-            dispatch(setStatus(data));
-        });
-    }
+export const getUserStatus = (userId) => async (dispatch) => {
+    let data = await profileAPI.getStatus(userId)
+
+    dispatch(setStatus(data));
+}
 
 
-export const updateUserStatus = (status) => (dispatch) => {
-        profileAPI.updateStatus(status).then(data => {
-            if (data.resultCode === 0)
-                dispatch(setStatus(status));
-        });
-    }
+export const updateUserStatus = (status) => async (dispatch) => {
+    let data = await profileAPI.updateStatus(status)
+
+    if (data.resultCode === 0)
+        dispatch(setStatus(status));
+
+}
 
 
 export default profile_reducer;
