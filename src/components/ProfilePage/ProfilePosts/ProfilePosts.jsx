@@ -7,7 +7,8 @@ import {maxLengthCreator, required} from "../../../utils/validators/validators";
 
 const ProfilePosts = (props) => {
 
-    let postsElements = props.profilePage.postsCollection.map(p => <PostItem message={ p.message } username={ p.username }/>)
+    let postsElements = props.profilePage.postsCollection.map(p => <PostItem message={ p.message } username={ p.username }
+                                                                             photos={ props.profilePage.profile.photos.large }/>)
 
     let addNewPost = (values) => {
         props.addPost(values.newPostText);
@@ -15,7 +16,7 @@ const ProfilePosts = (props) => {
 
     return (
         <>
-            <AddPostFormRedux onSubmit={ addNewPost }/>
+            <AddPostFormRedux onSubmit={ addNewPost } profile={ props.profilePage.profile }/>
             <div className={s.posts_collection}>
                 { postsElements }
             </div>
@@ -29,7 +30,8 @@ const AddPostForm = (props) => {
     return(
         <form className={s.posts_input  + " " + s.profile_content_block} onSubmit={props.handleSubmit}>
             <div className={s.posts_input_left}>
-                <p className={s.posts_img}/>
+                <img src={props.profile.photos.large} alt="" className={s.posts_img}/>
+                <p />
                 <Field component={ Input } className={s.posts_textarea} name={ "newPostText" } placeholder={"Enter your post"}
                        validate={ [required, maxLength10] }/>
             </div>

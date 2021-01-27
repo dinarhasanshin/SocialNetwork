@@ -30,7 +30,7 @@ let initialState = {
 }
 
 
-const friends_reducer = (state = initialState, action) => {
+const peoples_reducer = (state = initialState, action) => {
 
     switch (action.type) {
 
@@ -108,12 +108,12 @@ const userFollowUnFollowFlow = async (dispatch, userId, apiMethod, actionCreator
 }
 
 export const userFollow = (userId) => async (dispatch) => {
-    userFollowUnFollowFlow(dispatch, userId, usersAPI.follow.bind(usersAPI), follow);
+    await userFollowUnFollowFlow(dispatch, userId, usersAPI.follow.bind(usersAPI), follow);
 }
 
 export const userUnFollow = (userId) => async (dispatch) => {
-    userFollowUnFollowFlow(dispatch, userId, usersAPI.unFollow.bind(usersAPI), unFollow);
+    await userFollowUnFollowFlow(dispatch, userId, usersAPI.unFollow.bind(usersAPI), unFollow);
 }
 
 
-export default friends_reducer;
+export default peoples_reducer;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from '../src/components/Login/login';
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
@@ -8,8 +8,9 @@ import {initializeApp} from "./redux/app_reducer";
 import './App.css';
 import ProfilePageContainer from "./components/ProfilePage/ProfilePageContainer";
 import NavWrapper from "./components/NavWrapper/NavWrapper";
-import PeoplesPageContainer from "./components/PeoplesPage/PeoplesPageContainer";
+/*import PeoplesPageContainer from "./components/PeoplesPage/PeoplesPageContainer";*/
 
+const PeoplesPageContainer = React.lazy(() => import('./components/PeoplesPage/PeoplesPageContainer'));
 
 class App extends React.Component {
 
@@ -27,9 +28,13 @@ class App extends React.Component {
                 <div className="container">
                     <HeaderContainer/>
                     <NavWrapper/>
-                    <Route path="/peoples" render={() => <PeoplesPageContainer/>}/>
+                    <Route path="/peoples"
+                           render={() =>
+                           { return <Suspense fallback={ <div>Loading....</div> }><PeoplesPageContainer/></Suspense> }}/>
 
-                    <Route path="/profile/:userId?" render={() => <ProfilePageContainer/>}/>
+                    <Route path="/profile/:userId?"
+                           render={() =>
+                           { return <Suspense fallback={ <div>Loading....</div> }> <ProfilePageContainer/></Suspense>}}/>
 
 {/*                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>*/}
 

@@ -1,7 +1,7 @@
 import React from 'react';
-import {getUsers, userFollow, userUnFollow} from '../../redux/friends_reducer';
+import {getUsers, userFollow, userUnFollow} from '../../redux/peoples_reducer';
 import {connect} from "react-redux";
-import s from '../Friends_Content/friends_content.module.css';
+import s from './PeoplesPage.module.css';
 import {compose} from "redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import PeoplesPage from "./PeoplesPage";

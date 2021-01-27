@@ -7,7 +7,7 @@ const PostItem = (props) => {
     return (
         <div className={s.post_item   + " " + s.profile_content_block}>
             <div className={s.post_item_header}>
-                <p className={s.post_item_img}></p>
+                <img className={s.post_item_img} src={ props.photos }/>
                 <p className={s.post_name}>{ props.username }</p>
             </div>
             <div className={s.post_item_bottom}>

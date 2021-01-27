@@ -24,15 +24,25 @@
     height: 207px;
     background-color: green;
 }
+.input_file{
+    display: none;
+}
+.photo_edit_btn_div{
+    display: flex;
+    justify-content: center;
+}
 .photo_edit_btn{
+    background-color: grey;
+    text-align: center;
     outline: none;
-    width: 180px;
+    width: 205px;
     border-radius: 12px;
     border: 0px;
     margin: 14px auto 0px auto;
 }
 .photo_edit_btn:hover{
     cursor: pointer;
+    background-color: lightgrey;
 }
 .profile_right{
     grid-area: pr;

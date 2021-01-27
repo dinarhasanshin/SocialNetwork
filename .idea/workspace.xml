@@ -4,64 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Add app initialization and hooks">
-      <change afterPath="$PROJECT_DIR$/src/components/NavWrapper/NavWrapper.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/NavWrapper/NavWrapper.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPageContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileContent/ProfileContent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePageContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePostsContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileStatus/ProfileStatus.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileStatus/ProfileStatus.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/vk_style/VkStyle.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/object-helpers.js" afterDir="false" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Refactor and redesign app">
+      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileDataForm/ProfileDataForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/PreLoader/PreLoader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/common/PreLoader/PreLoader.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/headerContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Message_Wrapper/message_wrapper.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Message_Wrapper/message_wrapper.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Nav_Wrapper/nav_wrapper.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_status.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status/profile_statusWithHooks.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Content_Header/content_header.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/Post/post.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/Post/post.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/posts.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/Posts/postsContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/ProfileInfo/profile_info.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/ProfileInfo/profile_info.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_content.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_content.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Posts_content/profile_contentContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControl/FormsControl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/FormsControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/FormsControl/FormsControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/app_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/app_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/auth_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/friends_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPageContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePageContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePostsContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/vk_style/VkStyle.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/messages_reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/peoples_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +84,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.general" />
-    <property name="ts.external.directory.path" value="D:\Programs\JetBrains\apps\WebStorm\ch-0\203.6682.155\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="D:\Programs\JetBrains\apps\WebStorm\ch-0\203.7148.54\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -124,14 +96,34 @@
       <recent name="D:\ReactLearning\react-social-network\src\components\Messages_Content" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Work\React_Projects\react-social-network\src\components\ProfilePage\ProfileInfo" />
       <recent name="D:\Work\React_Projects\react-social-network\src\components\common\Paginator" />
       <recent name="D:\Work\React_Projects\react-social-network\src\components\common\FormsControl" />
       <recent name="D:\Work\React_Projects\react-social-network\src\components\ProfilePage" />
       <recent name="D:\Work\React_Projects\react-social-network\src\components\ProfilePage\ProfileHeader" />
-      <recent name="D:\ReactLearning\react-social-network\src\components\Posts_content" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -154,6 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.test" />
       </list>
     </recent_temporary>
@@ -248,7 +242,13 @@
       <workItem from="1610532898139" duration="16453000" />
       <workItem from="1610641760207" duration="2565000" />
       <workItem from="1611144888000" duration="3396000" />
-      <workItem from="1611219415816" duration="4374000" />
+      <workItem from="1611219415816" duration="5062000" />
+      <workItem from="1611240291361" duration="6152000" />
+      <workItem from="1611470431757" duration="1232000" />
+      <workItem from="1611473795575" duration="7921000" />
+      <workItem from="1611726325804" duration="11195000" />
+      <workItem from="1611744234146" duration="3029000" />
+      <workItem from="1611749666315" duration="6679000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -383,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609931409452</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Refactor and redesign app">
+      <created>1611225432651</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611225432651</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +427,8 @@
     <MESSAGE value="Add status and edit status" />
     <MESSAGE value="Add form-validations and login/logout options" />
     <MESSAGE value="Add app initialization and hooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add app initialization and hooks" />
+    <MESSAGE value="Refactor and redesign app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor and redesign app" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
