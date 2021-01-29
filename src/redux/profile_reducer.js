@@ -70,7 +70,7 @@ export const saveProfileSuccess = (profile) => ({type: SAVE_PROFILE_SUCCESS, pro
 
 
 export const setUserProfile = (userId) => async (dispatch) => {
-    let data = await usersAPI.getProfile(userId)
+    let data = await usersAPI.getProfile(userId);
 
     dispatch(setProfile(data));
 
