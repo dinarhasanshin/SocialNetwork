@@ -4,37 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Refactor and redesign app">
-      <change afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileDataForm/ProfileDataForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/PreLoader/PreLoader.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/PreLoader/PreLoader.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_content.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Friends_Content/friends_contentContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Messages_Content/message_contentContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeopleItem/PeopleItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PeoplesPage/PeoplesPageContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfileInfo/ProfileInfo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePageContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePageContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/PostItem/PostItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePosts.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePostsContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProfilePage/ProfilePosts/ProfilePostsContainer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Paginator/Paginator.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/vk_style/VkStyle.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/dialogs_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/messages_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/friends_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/peoples_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/profile_reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/profile_reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/redux-store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/redux-store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-    </list>
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="EditProfile mode and functions(PreReleaseVersion)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +48,7 @@
     <property name="ToolWindowDuplicates.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Posts_content/Content_Header/Profile_Status" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -248,7 +218,9 @@
       <workItem from="1611473795575" duration="7921000" />
       <workItem from="1611726325804" duration="11195000" />
       <workItem from="1611744234146" duration="3029000" />
-      <workItem from="1611749666315" duration="6679000" />
+      <workItem from="1611749666315" duration="7233000" />
+      <workItem from="1611837715389" duration="3492000" />
+      <workItem from="1611913135565" duration="8540000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -390,7 +362,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611225432651</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="EditProfile mode and functions(PreReleaseVersion)">
+      <created>1611758124406</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611758124406</updated>
+    </task>
+    <task id="LOCAL-00022" summary="EditProfile mode and functions(PreReleaseVersion)">
+      <created>1611923856392</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611923856392</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,7 +414,8 @@
     <MESSAGE value="Add form-validations and login/logout options" />
     <MESSAGE value="Add app initialization and hooks" />
     <MESSAGE value="Refactor and redesign app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor and redesign app" />
+    <MESSAGE value="EditProfile mode and functions(PreReleaseVersion)" />
+    <option name="LAST_COMMIT_MESSAGE" value="EditProfile mode and functions(PreReleaseVersion)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
