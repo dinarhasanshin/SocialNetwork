@@ -1,11 +1,11 @@
 import {profileAPI, usersAPI} from "../api/api";
-import user from "@iconify-icons/uil/user";
 
 const ADD_POST = 'ADD-POST';
 const SET_PROFILE = 'SET-PROFILE';
 const SET_STATUS = 'SET-STATUS';
 const SAVE_PHOTO_SUCCESS = 'SAVE-PHOTO-SUCCESS';
-const SAVE_PROFILE_SUCCESS = 'SAVE-PROFILE-SUCCESS';
+const SET_IS_OWNER = 'SET-IS-OWNER';
+
 
 
 let initialState = {
@@ -26,7 +26,8 @@ let initialState = {
 
     postsCollection: [
     ],
-    status: ""
+    status: "",
+    isOwner: false
 }
 
 const profile_reducer = (state = initialState, action) => {
@@ -53,8 +54,11 @@ const profile_reducer = (state = initialState, action) => {
         case SAVE_PHOTO_SUCCESS:
             return {...state, profile: {...state.profile, photos: action.photos}}
 
-/*        case SAVE_PROFILE_SUCCESS:
-            return {...state, profile: action.profile}*/
+        case SET_IS_OWNER:
+            return {
+                ...state,
+                isOwner: action.isOwner
+            }
 
         default:
             return state;
@@ -65,15 +69,13 @@ const profile_reducer = (state = initialState, action) => {
 export const addPost = (newPostText) => ({type: ADD_POST, newPostText})
 export const setProfile = (profile) => ({type: SET_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
+export const setIsOwner = (isOwner) => ({type: SET_IS_OWNER, isOwner})
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
-export const saveProfileSuccess = (profile) => ({type: SAVE_PROFILE_SUCCESS, profile})
 
 
 export const setUserProfile = (userId) => async (dispatch) => {
     let data = await usersAPI.getProfile(userId);
-
     dispatch(setProfile(data));
-
 }
 
 

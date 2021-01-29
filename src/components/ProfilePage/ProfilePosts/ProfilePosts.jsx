@@ -6,7 +6,6 @@ import {Input} from "../../common/FormsControl/FormsControl";
 import {maxLengthCreator, required} from "../../../utils/validators/validators";
 
 const ProfilePosts = (props) => {
-
     let postsElements = props.profilePage.postsCollection.map(p => <PostItem message={ p.message } username={ p.username }
                                                                              photos={ props.profilePage.profile.photos.large }/>)
 
@@ -16,7 +15,9 @@ const ProfilePosts = (props) => {
 
     return (
         <>
-            <AddPostFormRedux onSubmit={ addNewPost } profile={ props.profilePage.profile }/>
+            {
+                props.isOwner && <AddPostFormRedux onSubmit={ addNewPost } profile={ props.profilePage.profile }/>
+            }
             <div className={s.posts_collection}>
                 { postsElements }
             </div>
@@ -24,7 +25,7 @@ const ProfilePosts = (props) => {
     );
 };
 
-let maxLength10 = maxLengthCreator(10);
+let maxLength1000 = maxLengthCreator(1000);
 
 const AddPostForm = (props) => {
     return(
@@ -33,7 +34,7 @@ const AddPostForm = (props) => {
                 <img src={props.profile.photos.large} alt="" className={s.posts_img}/>
                 <p />
                 <Field component={ Input } className={s.posts_textarea} name={ "newPostText" } placeholder={"Enter your post"}
-                       validate={ [required, maxLength10] }/>
+                       validate={ [required, maxLength1000] }/>
             </div>
             <div>
                 <button className={s.posts_btn_send}>Send</button>

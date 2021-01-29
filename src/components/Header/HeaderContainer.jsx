@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from './Header';
 import {connect} from "react-redux";
-import {authLogout, userAuth} from "../../redux/auth_reducer";
+import {authLogout, setAuthUserProfile, userAuth} from "../../redux/auth_reducer";
 
 
 class HeaderContainer extends React.Component{
 
-/*    componentDidMount() {
-            this.props.userAuth();
-            }*/
+    componentDidMount() {
+        this.props.setAuthUserProfile(this.props.id);
+    }
 
     state = {
         logOutMenu: false,
@@ -30,11 +30,12 @@ class HeaderContainer extends React.Component{
 
 let mapStateToProps = (state) => {
     return{
+        id: state.auth.id,
         isAuth: state.auth.isAuth,
         login: state.auth.login,
-        profile: state.profilePage.profile
+        profile: state.auth.authProfile
     }
 }
 
 
-export default connect(mapStateToProps, {userAuth, authLogout})(HeaderContainer);
+export default connect(mapStateToProps, {userAuth, authLogout, setAuthUserProfile})(HeaderContainer);
