@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="EditProfile mode and functions(PreReleaseVersion)" />
+    <list default="true" id="6cdd0534-558b-449f-85c1-c15e4e9201f4" name="Default Changelist" comment="Adding and deploy gh-pages">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +55,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="D:\Programs\JetBrains\apps\WebStorm\ch-0\203.7148.54\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -221,6 +223,10 @@
       <workItem from="1611749666315" duration="7233000" />
       <workItem from="1611837715389" duration="3492000" />
       <workItem from="1611913135565" duration="8540000" />
+      <workItem from="1611924335683" duration="3688000" />
+      <workItem from="1611941876159" duration="1451000" />
+      <workItem from="1611997360111" duration="6106000" />
+      <workItem from="1612106015026" duration="8748000" />
     </task>
     <task id="LOCAL-00001" summary="Started official developing CubeFace social network">
       <created>1606842276265</created>
@@ -376,7 +382,49 @@
       <option name="project" value="LOCAL" />
       <updated>1611923856392</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="EditProfile mode and functions(PreReleaseVersion)">
+      <created>1611924381250</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611924381250</updated>
+    </task>
+    <task id="LOCAL-00024" summary="EditProfile mode and functions(PreReleaseVersion))">
+      <created>1611924421992</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611924421992</updated>
+    </task>
+    <task id="LOCAL-00025" summary="EditProfile mode and functions(PreReleaseVersion))">
+      <created>1611924696294</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1611924696294</updated>
+    </task>
+    <task id="LOCAL-00026" summary="EditProfile mode and functions(PreReleaseVersion)">
+      <created>1611928358268</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1611928358268</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Optimizations and refactoring">
+      <created>1612110178700</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612110178700</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Adding and deploy gh-pages">
+      <created>1612114200204</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612114200317</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,8 +462,11 @@
     <MESSAGE value="Add form-validations and login/logout options" />
     <MESSAGE value="Add app initialization and hooks" />
     <MESSAGE value="Refactor and redesign app" />
+    <MESSAGE value="EditProfile mode and functions(PreReleaseVersion))" />
     <MESSAGE value="EditProfile mode and functions(PreReleaseVersion)" />
-    <option name="LAST_COMMIT_MESSAGE" value="EditProfile mode and functions(PreReleaseVersion)" />
+    <MESSAGE value="Optimizations and refactoring" />
+    <MESSAGE value="Adding and deploy gh-pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding and deploy gh-pages" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
