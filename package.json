@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dinarhasanshin.github.io/react-social-network",
+  "homepage": "https://dinarhasanshin.github.io/SocialNetwork",
   "name": "react-social-network",
   "version": "0.1.0",
   "private": true,
@@ -47,6 +47,7 @@
   },
   "devDependencies": {
     "@iconify-icons/uil": "^1.0.1",
-    "@iconify/react": "^1.1.3"
+    "@iconify/react": "^1.1.3",
+    "gh-pages": "^3.1.0"
   }
 }
