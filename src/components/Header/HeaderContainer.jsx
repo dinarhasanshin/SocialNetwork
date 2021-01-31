@@ -9,6 +9,11 @@ class HeaderContainer extends React.Component{
     componentDidMount() {
         this.props.setAuthUserProfile(this.props.id);
     }
+/*    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.profile !== this.props.profilePage){
+            return this.props.setAuthUserProfile(this.props.id);
+        }
+    }*/
 
     state = {
         logOutMenu: false,
@@ -33,7 +38,8 @@ let mapStateToProps = (state) => {
         id: state.auth.id,
         isAuth: state.auth.isAuth,
         login: state.auth.login,
-        profile: state.auth.authProfile
+        profile: state.auth.authProfile,
+        profilePage: state.profilePage.profile
     }
 }
 

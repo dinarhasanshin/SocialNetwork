@@ -1,6 +1,6 @@
 import {authAPI, usersAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
-import {setProfile} from "./profile_reducer";
+
 
 const SET_USER_DATA = 'SET-USER-DATA';
 const SET_AUTH_PROFILE = 'SET-AUTH-PROFILE';
@@ -13,6 +13,7 @@ let initialState = {
     isAuth: false,
     authProfile: null
 }
+
 
 const auth_reducer = (state = initialState, action) => {
 
@@ -35,8 +36,10 @@ const auth_reducer = (state = initialState, action) => {
     }
 }
 
+
 export const setAuthUserData = (id, login, email, isAuth) => ({type: SET_USER_DATA, data: { id, login, email, isAuth }})
 export const setAuthProfile = (profile) => ({type: SET_AUTH_PROFILE, profile})
+
 
 export const userAuth = () => async (dispatch) => {
     let data = await authAPI.getAuth();

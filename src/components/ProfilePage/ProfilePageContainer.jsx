@@ -11,6 +11,7 @@ import {
 import {withRouter} from 'react-router-dom';
 import {compose} from "redux";
 import ProfilePage from "./ProfilePage";
+import {setAuthUserProfile} from "../../redux/auth_reducer";
 
 class ProfilePageContainer extends React.Component {
 
@@ -24,7 +25,6 @@ class ProfilePageContainer extends React.Component {
             }
         }
         this.props.setUserProfile(userId);
-
         this.props.getUserStatus(userId);
     }
 
@@ -60,6 +60,7 @@ let mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, { setUserProfile, getUserStatus, updateUserStatus, savePhoto, saveProfile, setIsOwner }),
+    connect(mapStateToProps, { setUserProfile, getUserStatus, updateUserStatus, savePhoto,
+        saveProfile, setIsOwner, setAuthUserProfile }),
     withRouter
 )(ProfilePageContainer);

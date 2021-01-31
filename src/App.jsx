@@ -6,11 +6,12 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app_reducer";
 import './App.css';
-import ProfilePageContainer from "./components/ProfilePage/ProfilePageContainer";
+/*import ProfilePageContainer from "./components/ProfilePage/ProfilePageContainer";*/
 import NavWrapper from "./components/NavWrapper/NavWrapper";
 /*import PeoplesPageContainer from "./components/PeoplesPage/PeoplesPageContainer";*/
 
 const PeoplesPageContainer = React.lazy(() => import('./components/PeoplesPage/PeoplesPageContainer'));
+const ProfilePageContainer = React.lazy(() => import('./components/ProfilePage/ProfilePageContainer'));
 
 class App extends React.Component {
 

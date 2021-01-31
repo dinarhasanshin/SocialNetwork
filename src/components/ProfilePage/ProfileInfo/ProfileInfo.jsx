@@ -31,9 +31,11 @@ const ProfileData = (props) => {
             <div className={s.data_contacts_header}>Job <hr/></div>
             <ul>
 
-                <li>Looking for a job: { props.profile.lookingForAJob ? "Yes" : "No" }</li>
+                <li> <b>Looking for a job:</b> { props.profile.lookingForAJob ? "Yes" : "No" }</li>
 
-                <li>Skills: {props.profile.lookingForAJobDescription ? "Yes" : "NoDescription"}</li>
+                <li> <b>Skills:</b> { props.profile.lookingForAJobDescription
+                    ? props.profile.lookingForAJobDescription
+                    : "NoDescription" }</li>
 
             </ul>
             <div className={s.data_contacts_header}>AboutMe <hr/></div>
@@ -56,8 +58,8 @@ const ProfileData = (props) => {
 
 const Contact = ({contactTitle, contactValue}) => {
     return(
-        <li><b>{ contactTitle }:</b> {contactValue !== null ? contactValue : "NaN"}</li>
+        <li><b>{ contactTitle }:</b> {contactValue !== null && contactValue.length ? contactValue : "NaN"}</li>
     )
-}
+};
 
 export default ProfileInfo;

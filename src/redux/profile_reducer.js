@@ -1,4 +1,5 @@
 import {profileAPI, usersAPI} from "../api/api";
+import {setAuthUserProfile} from "./auth_reducer";
 
 const ADD_POST = 'ADD-POST';
 const SET_PROFILE = 'SET-PROFILE';
@@ -9,23 +10,8 @@ const SET_IS_OWNER = 'SET-IS-OWNER';
 
 
 let initialState = {
-
-    fullName: "Dinar Hasanshin",
-
     profile: null,
-
-    dataContacts: [
-        {id: 1, type: "GitHub" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 2, type: "Vk" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 3, type: "Facebook" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 4, type: "Instagram" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 5, type: "Twitter" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 6, type: "YouTube" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-        {id: 6, type: "WebSite" , value: "\"http://www.youtube.com/staryi_channel_84\""},
-    ],
-
-    postsCollection: [
-    ],
+    postsCollection: [],
     status: "",
     isOwner: false
 }
@@ -55,10 +41,7 @@ const profile_reducer = (state = initialState, action) => {
             return {...state, profile: {...state.profile, photos: action.photos}}
 
         case SET_IS_OWNER:
-            return {
-                ...state,
-                isOwner: action.isOwner
-            }
+            return {...state, isOwner: action.isOwner}
 
         default:
             return state;
@@ -75,6 +58,7 @@ export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
 export const setUserProfile = (userId) => async (dispatch) => {
     let data = await usersAPI.getProfile(userId);
+
     dispatch(setProfile(data));
 }
 
@@ -94,10 +78,13 @@ export const updateUserStatus = (status) => async (dispatch) => {
 
 }
 
-export const savePhoto = (file) => async (dispatch) => {
+export const savePhoto = (file) => async (dispatch, getState) => {
+    const userId = getState().auth.id;
     let data = await profileAPI.savePhoto(file)
+
     if (data.resultCode === 0){
         dispatch(savePhotoSuccess(data.data.photos));
+        dispatch(setAuthUserProfile(userId));
     }
 }
 
@@ -107,6 +94,8 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
 
     if (data.resultCode === 0){
         dispatch(setUserProfile(userId));
+        dispatch(setAuthUserProfile(userId));
+        //TODO: Релизовать нормальную передачу данных в Header компоненту
     }
 }
 
