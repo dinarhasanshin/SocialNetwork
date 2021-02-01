@@ -25,16 +25,15 @@ const ProfilePosts = (props) => {
     );
 };
 
-let maxLength1000 = maxLengthCreator(1000);
 
 const AddPostForm = (props) => {
     return(
-        <form className={s.posts_input  + " " + s.profile_content_block} onSubmit={props.handleSubmit}>
+        <form className={s.posts_input  + " " + s.content_block_size} onSubmit={props.handleSubmit}>
             <div className={s.posts_input_left}>
                 <img src={props.profile.photos.large} alt="" className={s.posts_img}/>
                 <p />
                 <Field component={ Input } className={s.posts_textarea} name={ "newPostText" } placeholder={"Enter your post"}
-                       validate={ [required, maxLength1000] }/>
+                        />
             </div>
             <div>
                 <button className={s.posts_btn_send}>Send</button>

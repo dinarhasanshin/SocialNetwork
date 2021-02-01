@@ -4,14 +4,13 @@
     grid-template-areas:
             "pl pr";
 }
-.profile_content_block{
+.content_block_size{
     margin: 16px 6px 6px 6px;
     border-radius: 6px;
-    background-color: orangered;
+    background-color: white;
 }
 .profile_left{
     grid-area: pl;
-    background-color: yellow;
 }
 .profile_photo{
     display: flex;
@@ -22,7 +21,7 @@
     margin: 0 auto;
     width: 207px;
     height: 207px;
-    background-color: green;
+    background-color: orangered;
 }
 .input_file{
     display: none;
@@ -32,11 +31,15 @@
     justify-content: center;
 }
 .photo_edit_btn{
-    background-color: grey;
+    background-color: #dfe6ed;
     text-align: center;
     outline: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 205px;
-    border-radius: 12px;
+    border-radius: 5px;
     border: 0px;
     margin: 14px auto 0px auto;
 }
@@ -46,7 +49,6 @@
 }
 .profile_right{
     grid-area: pr;
-    background-color: darkgoldenrod;
 }
 .profile_data{
     padding: 14px;

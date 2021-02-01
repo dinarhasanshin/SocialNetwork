@@ -1,7 +1,11 @@
 .peoples_content{
     width: 550px;
-    background-color: blue;
     grid-area: ht;
+}
+.content_block_size{
+    margin: 16px 6px 6px 6px;
+    border-radius: 6px;
+    background-color: white;
 }
 .preloader{
     display: flex;

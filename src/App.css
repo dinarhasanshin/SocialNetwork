@@ -1,4 +1,7 @@
 /*Page styles*/
+html{
+    background-color: #edeef0;
+}
 
 .container{
     width: 965px;

@@ -1,6 +1,5 @@
 .nav_wrapper{
     grid-area: nw;
-    background-color: #8224e3;
 }
 .nav_wrapper nav ul {
     padding: 1px;
@@ -18,8 +17,8 @@
     padding: 5px;
 }
 .nav_wrapper nav ul li a:hover{
-    background-color: red;
-    border: 0px solid red;
+    background-color: #dfe6ed;
+    border: 0px solid #dfe6ed;
     border-radius: 5px;
 }
 .nav_icons{

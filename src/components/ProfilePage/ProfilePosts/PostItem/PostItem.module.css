@@ -1,7 +1,7 @@
-.profile_content_block{
+.content_block_size{
     margin: 16px 6px 6px 6px;
     border-radius: 6px;
-    background-color: orangered;
+    background-color: white;
 }
 .post_item{
     padding: 14px;

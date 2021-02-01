@@ -20,26 +20,30 @@ const PeopleItem = (props) => {
         <div className={s.people_item}>
             <div className={s.people_item_content}>
                 <NavLink to={"/profile/" + u.id}>
-                    <img className={s.people_item_img}
-                         src={u.photos.small != null ? u.photos.small : userPhoto} alt=""/>
+                    <div className={s.people_item_img_div}>
+                        <p className={s.people_item_img}
+                           src={u.photos.small != null ? u.photos.small : userPhoto} alt=""/>
+                    </div>
                 </NavLink>
                 <div className={s.people_item_name}>
                     <span>{u.name}</span>
                     {u.status && <span> | {u.status}</span>}
 
                 </div>
-                {u.followed
-                    ? <button
-                        className={props.isFollowing.some(id => id === u.id)
-                            ? s.people_item_btn_disable
-                            : s.people_item_btn} onClick={(e) =>
-                    {props.unFollow(u.id)}}>UnFollow</button>
-                    : <button
-                        className={props.isFollowing.some(id => id === u.id)
-                            ? s.people_item_btn_disable
-                            : s.people_item_btn} onClick={(e) =>
-                    {props.follow(u.id)}}>Follow</button>
-                }
+                <div className={s.people_item_btn_div}>
+                    {u.followed
+                        ? <button
+                            className={props.isFollowing.some(id => id === u.id)
+                                ? s.people_item_btn_disable
+                                : s.people_item_btn} onClick={(e) =>
+                        {props.unFollow(u.id)}}>UnFollow</button>
+                        : <button
+                            className={props.isFollowing.some(id => id === u.id)
+                                ? s.people_item_btn_disable
+                                : s.people_item_btn} onClick={(e) =>
+                        {props.follow(u.id)}}>Follow</button>
+                    }
+                </div>
             </div>
             <hr/>
         </div>

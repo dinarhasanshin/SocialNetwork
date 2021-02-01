@@ -15,10 +15,10 @@ const ProfilePage = ({ savePhoto, isOwner, ...props }) => {
     return (
             <section className={s.profile_content}>
                 <div className={s.profile_left}>
-                    <div className={s.profile_photo + " " + s.profile_content_block}>
+                    <div className={s.profile_photo + " " + s.content_block_size}>
                         {props.profile === null || props.profile.photos.large == null
                             ? <div className={s.photo_item}><p className={s.profile_photo}></p></div>
-                            : <img className={s.photo_item} src={props.profile.photos.large}/>}
+                            : <img className={s.photo_item} src={props.profile.photos.large} alt={""}/>}
 
                         {isOwner
                         && <div className={s.photo_edit_btn_div}>
@@ -29,13 +29,13 @@ const ProfilePage = ({ savePhoto, isOwner, ...props }) => {
                     </div>
                 </div>
                 <div className={s.profile_right}>
-                    <div className={s.profile_data + " " + s.profile_content_block}>
+                    <div className={s.profile_data + " " + s.content_block_size}>
                         <div className={s.data_header}>
-                            <span className="Name">{props.profile === null ? props.profilePage.fullName : props.profile.fullName}</span>
+                            <b><span className="Name">{props.profile === null ? props.profilePage.fullName : props.profile.fullName}</span></b>
                             <ProfileStatus status={ props.status } updateUserStatus={ props.updateUserStatus }/>
                             <hr/>
                         </div>
-                            <ProfileInfo dataContacts={ props.profilePage.dataContacts } profile={ props.profile }
+                            <ProfileInfo profile={ props.profile }
                                          isOwner={ isOwner } saveProfile={ props.saveProfile }/>
 
                     </div>

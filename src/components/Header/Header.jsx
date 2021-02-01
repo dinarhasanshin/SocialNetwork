@@ -9,13 +9,13 @@ const Header = (props) =>{
     return(
         <header className={s.header}>
             <p className={s.header_logo}>
-                CubeFace
+                CF
             </p>
             {props.isAuth
                 ? <span className={s.header_auth} onClick={ props.toggleLogOutMenu }><p className={s.auth_name}  >{ props.login } </p>
                     {props.profile === null || props.profile.photos.large === null
                         ? <p className={s.auth_img}/>
-                        : <img className={s.auth_img} src={props.profile.photos.large}/>
+                        : <img className={s.auth_img} src={props.profile.photos.large} alt={""}/>
                     } <InlineIcon icon={angleDown}/>
 
             </span>

@@ -1,7 +1,7 @@
-.profile_content_block{
+.content_block_size{
     margin: 16px 6px 6px 6px;
     border-radius: 6px;
-    background-color: orangered;
+    background-color: white;
 }
 .posts_input{
     display: flex;
@@ -16,7 +16,7 @@
 .posts_img{
     width: 32px;
     height: 32px;
-    background-color: orange;
+    background-color: white;
     border-radius: 50%;
     padding: 0;
     margin: 0 10px 0 0;

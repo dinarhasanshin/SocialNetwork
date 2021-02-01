@@ -5,9 +5,9 @@ import thumbsUp from "@iconify-icons/uil/thumbs-up";
 
 const PostItem = (props) => {
     return (
-        <div className={s.post_item   + " " + s.profile_content_block}>
+        <div className={s.post_item   + " " + s.content_block_size}>
             <div className={s.post_item_header}>
-                <img className={s.post_item_img} src={ props.photos }/>
+                <img className={s.post_item_img} src={ props.photos } alt={""}/>
                 <p className={s.post_name}>{ props.username }</p>
             </div>
             <div className={s.post_item_bottom}>
