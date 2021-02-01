@@ -17,11 +17,15 @@
     flex-direction: column;
     padding: 14px;
 }
-.photo_item{
+.photo_item img{
     margin: 0 auto;
     width: 207px;
     height: 207px;
-    background-color: orangered;
+    background-color: #edeef0;
+    border: 0px solid white;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5px;
 }
 .input_file{
     display: none;

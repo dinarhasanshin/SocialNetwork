@@ -3,6 +3,7 @@ import s from "./ProfilePage.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import ProfilePostsContainer from "./ProfilePosts/ProfilePostsContainer";
 import ProfileStatus from "./ProfileStatus/ProfileStatus";
+import userPhoto from '../../assets/images/defaulIconProfileSquad.png';
 
 const ProfilePage = ({ savePhoto, isOwner, ...props }) => {
 
@@ -17,7 +18,10 @@ const ProfilePage = ({ savePhoto, isOwner, ...props }) => {
                 <div className={s.profile_left}>
                     <div className={s.profile_photo + " " + s.content_block_size}>
                         {props.profile === null || props.profile.photos.large == null
-                            ? <div className={s.photo_item}><p className={s.profile_photo}></p></div>
+                            ? <div className={s.photo_item}>
+                                {/*<p className={s.profile_photo}></p>*/}
+                                <img src={userPhoto} alt=""/>
+                        </div>
                             : <img className={s.photo_item} src={props.profile.photos.large} alt={""}/>}
 
                         {isOwner

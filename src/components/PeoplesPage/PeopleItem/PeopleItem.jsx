@@ -1,7 +1,7 @@
 import React from 'react';
 import s from "./PeopleItem.module.css";
 import {NavLink} from "react-router-dom";
-import userPhoto from "../../../assets/images/default_user_image.png";
+import userPhoto from "../../../assets/images/defaulIconProfile.png";
 
 const PeopleItem = (props) => {
     let u = props.user;
@@ -21,8 +21,9 @@ const PeopleItem = (props) => {
             <div className={s.people_item_content}>
                 <NavLink to={"/profile/" + u.id}>
                     <div className={s.people_item_img_div}>
-                        <p className={s.people_item_img}
-                           src={u.photos.small != null ? u.photos.small : userPhoto} alt=""/>
+                        <p className={s.people_item_img}>
+                           <img src={u.photos.small != null ? u.photos.small : userPhoto} alt=""/>
+                        </p>
                     </div>
                 </NavLink>
                 <div className={s.people_item_name}>

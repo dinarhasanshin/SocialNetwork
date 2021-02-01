@@ -6,7 +6,7 @@ import {Input} from "../../../common/FormsControl/FormsControl";
 const ProfileDataForm = ({ handleSubmit, profile }) => {
     return(
             <form className={s.data_contacts} onSubmit={ handleSubmit }>
-                <button>Save</button> <div>EditMode</div>
+                <button className={s.btn_editMode}>Save</button>
                 <div className={s.data_contacts_header}>Job <hr/></div>
                 <ul>
                     <li>FullName: <Field component={Input} type={"text"} name={"fullName"}/></li>

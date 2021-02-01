@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import s from "./ProfileInfo.module.css";
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm';
 
-const ProfileInfo = ({saveProfile, ...props}) => {
+const ProfileInfo = ({saveProfile, toggleProfileEditMode, ...props}) => {
 
     let [editMode, setEditMode] = useState(false);
 
 
     const onSubmit = (formData) => {
-        console.log(formData);
         saveProfile(formData);
         setEditMode(false);
     }
@@ -26,7 +25,7 @@ const ProfileInfo = ({saveProfile, ...props}) => {
 const ProfileData = (props) => {
     return(
         <div className={s.data_contacts}>
-            {props.isOwner && <button onClick={props.goToEditMode}>Edit</button>
+            {props.isOwner && <button className={s.btn_editMode} onClick={props.goToEditMode}>Edit</button>
             }
             <div className={s.data_contacts_header}>Job <hr/></div>
             <ul>

@@ -27,6 +27,8 @@
     outline: none;
     width: 60px;
     height: 30px;
+    background-color: #2787f5;
+    color: white;
 }
 .posts_btn_send:hover{
     cursor: pointer;
