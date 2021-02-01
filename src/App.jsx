@@ -1,17 +1,16 @@
 import React, { Suspense } from "react";
 import HeaderContainer from './components/Header/HeaderContainer';
 import Login from '../src/components/Login/login';
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {HashRouter, Route, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app_reducer";
 import './App.css';
-/*import ProfilePageContainer from "./components/ProfilePage/ProfilePageContainer";*/
 import NavWrapper from "./components/NavWrapper/NavWrapper";
-/*import PeoplesPageContainer from "./components/PeoplesPage/PeoplesPageContainer";*/
 
 const PeoplesPageContainer = React.lazy(() => import('./components/PeoplesPage/PeoplesPageContainer'));
 const ProfilePageContainer = React.lazy(() => import('./components/ProfilePage/ProfilePageContainer'));
+
 
 class App extends React.Component {
 
@@ -25,7 +24,7 @@ class App extends React.Component {
             return <p>Loading...</p>
         }
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="container">
                     <HeaderContainer/>
                     <NavWrapper/>
@@ -41,7 +40,7 @@ class App extends React.Component {
 
                     <Route path="/login" render={() => <Login/>}/>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }

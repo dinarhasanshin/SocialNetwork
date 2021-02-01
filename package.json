@@ -1,8 +1,8 @@
 {
-  "homepage": "https://dinarhasanshin.github.io/SocialNetwork",
   "name": "react-social-network",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://dinarhasanshin.github.io/SocialNetwork",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
