@@ -18,7 +18,7 @@ const ProfilePage = ({ savePhoto, isOwner, ...props }) => {
                 <div className={s.profile_left}>
                     <div className={s.profile_photo + " " + s.content_block_size}>
                         {props.profile === null || props.profile.photos.large == null
-                            ? <div className={s.photo_item}>
+                            ? <div className={s.photo_item_img}>
                                 {/*<p className={s.profile_photo}></p>*/}
                                 <img src={userPhoto} alt=""/>
                         </div>
