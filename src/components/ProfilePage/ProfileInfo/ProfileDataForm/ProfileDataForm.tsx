@@ -1,9 +1,17 @@
+// @ts-ignore
 import s from "../ProfileInfo.module.css";
 import React from "react";
-import {Field, reduxForm} from "redux-form";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {Input} from "../../../common/FormsControl/FormsControl";
+import {ContactsType, ProfileType} from "../../../../types/types";
 
-const ProfileDataForm = ({ handleSubmit, profile }) => {
+
+type ProfileInfoFormOwnPropsType = {
+    profile: ProfileType
+}
+
+
+const ProfileDataForm: React.FC<InjectedFormProps<ProfileType, ProfileInfoFormOwnPropsType> & ProfileInfoFormOwnPropsType > = ({ handleSubmit, profile }) => {
     return(
             <form className={s.data_contacts} onSubmit={ handleSubmit }>
                 <button className={s.btn_editMode}>Save</button>
@@ -27,6 +35,6 @@ const ProfileDataForm = ({ handleSubmit, profile }) => {
     )
 }
 
-const ProfileDataFormReduxForm = reduxForm({ form: 'edit-profile'})(ProfileDataForm);
+const ProfileDataFormReduxForm = reduxForm<ProfileType, ProfileInfoFormOwnPropsType>({ form: 'edit-profile'})(ProfileDataForm);
 
 export default ProfileDataFormReduxForm;

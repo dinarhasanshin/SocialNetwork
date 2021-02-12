@@ -1,9 +1,16 @@
 import React from 'react';
+// @ts-ignore
 import s from "./PostItem.module.css";
 import {InlineIcon} from "@iconify/react";
 import thumbsUp from "@iconify-icons/uil/thumbs-up";
 
-const PostItem = (props) => {
+type PropsType = {
+    message: string,
+    username: string,
+    photos: string
+}
+
+const PostItem: React.FC<PropsType> = (props) => {
     return (
         <div className={s.post_item   + " " + s.content_block_size}>
             <div className={s.post_item_header}>

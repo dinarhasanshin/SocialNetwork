@@ -1,13 +1,31 @@
 import React, {useState} from 'react';
+// @ts-ignore
 import s from "./ProfileInfo.module.css";
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm';
+import {ContactsType, ProfileType} from "../../../types/types";
 
-const ProfileInfo = ({saveProfile, toggleProfileEditMode, ...props}) => {
+type LoginFormValuesType = {
+    fullName: string,
+    lookingForAJob: boolean,
+    lookingForAJobDescription: string,
+    aboutMe: string,
+    contacts: ContactsType
+}
+
+type ProfileInfoPropsType = {
+    saveProfile: (profile: ProfileType) => void,
+    profile: ProfileType,
+    isOwner: boolean
+
+}
+
+
+const ProfileInfo: React.FC<ProfileInfoPropsType> = ({saveProfile, ...props}) => {
 
     let [editMode, setEditMode] = useState(false);
 
 
-    const onSubmit = (formData) => {
+    const onSubmit = (formData: ProfileType) => {
         saveProfile(formData);
         setEditMode(false);
     }
@@ -22,7 +40,13 @@ const ProfileInfo = ({saveProfile, toggleProfileEditMode, ...props}) => {
     );
 };
 
-const ProfileData = (props) => {
+type ProfileDataPropsType = {
+    goToEditMode: () => void,
+    isOwner: boolean,
+    profile: ProfileType
+}
+
+const ProfileData: React.FC<ProfileDataPropsType> = (props) => {
     return(
         <div className={s.data_contacts}>
             {props.isOwner && <button className={s.btn_editMode} onClick={props.goToEditMode}>Edit</button>
@@ -46,7 +70,8 @@ const ProfileData = (props) => {
             <div className={s.data_contacts_header}>Contacts <hr/></div>
             <ul>
                 {Object.keys(props.profile.contacts).map(key => {
-                    return <Contact key={key} contactTitle={key} contactValue={props.profile.contacts[key]}/>
+                    return <Contact key={key} contactTitle={key}
+                                    contactValue={ props.profile.contacts[key as keyof ContactsType] }/>
                 })}
             </ul>
         </div>
@@ -54,8 +79,12 @@ const ProfileData = (props) => {
 }
 
 
+type ContactPropsType = {
+    contactTitle: string | null,
+    contactValue: string | null
+}
 
-const Contact = ({contactTitle, contactValue}) => {
+const Contact: React.FC<ContactPropsType> = ({contactTitle, contactValue}) => {
     return(
         <li><b>{ contactTitle }:</b> {contactValue !== null && contactValue.length ? contactValue : "NaN"}</li>
     )

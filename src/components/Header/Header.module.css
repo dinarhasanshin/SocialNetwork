@@ -43,18 +43,27 @@
 }
 .logOutMenu{
     position: absolute;
-    margin-top: 72px;
-    margin-left: 852.5px;
-    width: 112.7px;
+    margin-top: 92px;
+    margin-left: 805px;
+    width: 159px;
     height: 40px;
-    background-color: darkgrey;
     display: flex;
-    justify-content: center;
+    background-color: #fff;
     align-items: center;
     z-index: 10;
+    border: 1px solid lightgrey;
 }
-.logOutMenu:hover{
-    background-color: cyan;
+.logOutMenu button{
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background-color: #fff;
+    outline: none;
+}
+.logOutMenu button:hover{
+    cursor: pointer;
+    background-color: #dfe6ed;
 }
 
 

@@ -1,8 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react';
+// @ts-ignore
 import s from './ProfileStatus.module.css';
 
 
-const ProfileStatus = (props) => {
+type PropsType = {
+    status: string | null,
+    isOwner: boolean,
+    updateUserStatus: (status: string) => void
+}
+
+const ProfileStatus: React.FC<PropsType> = (props) => {
 
     let [editMode, setEditMode] = useState(false);
     let [status, setStatus] = useState(props.status);
@@ -11,16 +18,16 @@ const ProfileStatus = (props) => {
         setStatus(props.status);
     }, [props.status]);
 
-    const activatedEditMode = () => {
-        setEditMode(true);
+    const toggleEditMode = () => {
+        if (props.isOwner){
+            setEditMode(!editMode);
+            if(status)
+            props.updateUserStatus(status);
+        }
+
     }
 
-    const deactivatedEditMode = () => {
-        setEditMode(false);
-        props.updateUserStatus(status);
-    }
-
-    const onStatusChange = (e) => {
+    const onStatusChange = (e:ChangeEvent<HTMLInputElement>) => {
         setStatus(e.currentTarget.value);
     }
 
@@ -29,11 +36,11 @@ const ProfileStatus = (props) => {
             {!editMode
                 ? <div> <span className={s.profile_status_input}
                               onClick={() => {
-                                  activatedEditMode()
+                                  toggleEditMode()
                               }}>{props.status}</span></div>
 
                 : <div><input   autoFocus={true}
-                              onBlur={() => {deactivatedEditMode()}} value={status}
+                              onBlur={() => {toggleEditMode()}} value={status!== null ? status : ""}
                               onChange={onStatusChange}/></div>
             }
         </div>

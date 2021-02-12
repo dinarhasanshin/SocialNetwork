@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import s from './NavWrapper.module.css';
 import {NavLink} from "react-router-dom";
 import {InlineIcon} from "@iconify/react";

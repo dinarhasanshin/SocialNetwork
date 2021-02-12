@@ -1,10 +1,21 @@
 import React from 'react';
+// @ts-ignore
 import s from './Header.module.css';
 import {NavLink} from "react-router-dom";
 import {InlineIcon} from "@iconify/react";
 import angleDown from "@iconify-icons/uil/angle-down";
+import {ProfileType} from "../../types/types";
 
-const Header = (props) =>{
+type PropsType = {
+    isAuth: boolean,
+    profile: ProfileType | null
+    toggleLogOutMenu: () => void,
+    login: string | null,
+    authLogOutRedirect: () => void,
+    logOutMenu: boolean
+}
+
+const Header: React.FC<PropsType> = (props) =>{
 
     return(
         <header className={s.header}>
@@ -12,7 +23,8 @@ const Header = (props) =>{
                 CF
             </p>
             {props.isAuth
-                ? <span className={s.header_auth} onClick={ props.toggleLogOutMenu }><p className={s.auth_name}  >{ props.login } </p>
+                ? <span className={s.header_auth} onClick={ props.toggleLogOutMenu }>
+                    <p className={s.auth_name}  >{ props.login } </p>
                     {props.profile === null || props.profile.photos.large === null
                         ? <p className={s.auth_img}/>
                         : <img className={s.auth_img} src={props.profile.photos.large} alt={""}/>
@@ -21,7 +33,10 @@ const Header = (props) =>{
             </span>
                 :<span className={s.header_auth}><NavLink to={"/login"}>Login</NavLink></span>
             }
-            {props.isAuth && props.logOutMenu && <div className={s.logOutMenu}><button onClick={ props.authLogout }>Log Out</button></div>}
+            {props.isAuth && props.logOutMenu
+            && <div className={s.logOutMenu}>
+                <button onClick={ props.authLogOutRedirect }>Log Out</button>
+            </div>}
 
         </header>
     )
