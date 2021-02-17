@@ -4,13 +4,6 @@ import s from "./ProfileInfo.module.css";
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm';
 import {ContactsType, ProfileType} from "../../../types/types";
 
-type LoginFormValuesType = {
-    fullName: string,
-    lookingForAJob: boolean,
-    lookingForAJobDescription: string,
-    aboutMe: string,
-    contacts: ContactsType
-}
 
 type ProfileInfoPropsType = {
     saveProfile: (profile: ProfileType) => void,

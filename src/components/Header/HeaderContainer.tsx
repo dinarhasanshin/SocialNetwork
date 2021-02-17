@@ -47,10 +47,9 @@ class HeaderContainer extends React.Component<PropsType>{
         })
     };
     authLogOutRedirect = () => {
-        debugger
         this.props.authLogout();
         if(this.props.isAuth){
-            this.props.history.push("/login");
+            this.props.history.push("/peoples");
         }
     }
 
@@ -75,6 +74,7 @@ let mapStateToProps = (state: AppStateType): MapStatePropsType => {
 
 
 export default compose<React.ComponentType>(
-    connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps, {userAuth, authLogout, setAuthUserProfile}),
+    connect<MapStatePropsType, MapDispatchPropsType, OwnPropsType, AppStateType>(mapStateToProps,
+        {userAuth, authLogout, setAuthUserProfile}),
     withRouter,
 )(HeaderContainer);

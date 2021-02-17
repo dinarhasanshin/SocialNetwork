@@ -46,7 +46,7 @@ const ProfilePage: React.FC<PropsType> = ({ savePhoto, isOwner, ...props }) => {
                     </div>
                 </div>
                 <div className={s.profile_right}>
-                    <div className={s.profile_data + " " + s.content_block_size}>
+                    <div className={s.profile_data + " " + s.content_block_size_right}>
                         <div className={s.data_header}>
                             <b><span className="Name">{props.profile === null ? props.profilePage.profile.fullName : props.profile.fullName}</span></b>
                             <ProfileStatus status={ props.status } isOwner={ isOwner } updateUserStatus={ props.updateUserStatus }/>

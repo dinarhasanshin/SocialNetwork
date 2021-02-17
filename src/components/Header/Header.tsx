@@ -5,6 +5,8 @@ import {NavLink} from "react-router-dom";
 import {InlineIcon} from "@iconify/react";
 import angleDown from "@iconify-icons/uil/angle-down";
 import {ProfileType} from "../../types/types";
+// @ts-ignore
+import userPhoto from "../../assets/images/defaulIconProfile.png";
 
 type PropsType = {
     isAuth: boolean,
@@ -26,7 +28,7 @@ const Header: React.FC<PropsType> = (props) =>{
                 ? <span className={s.header_auth} onClick={ props.toggleLogOutMenu }>
                     <p className={s.auth_name}  >{ props.login } </p>
                     {props.profile === null || props.profile.photos.large === null
-                        ? <p className={s.auth_img}/>
+                        ? <img className={s.auth_img} src={userPhoto} alt={""}/>
                         : <img className={s.auth_img} src={props.profile.photos.large} alt={""}/>
                     } <InlineIcon icon={angleDown}/>
 

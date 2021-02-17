@@ -9,6 +9,11 @@
     border-radius: 6px;
     background-color: white;
 }
+.content_block_size_right{
+    margin: 16px 0px 6px 6px;
+    border-radius: 6px;
+    background-color: white;
+}
 .profile_left{
     grid-area: pl;
 }

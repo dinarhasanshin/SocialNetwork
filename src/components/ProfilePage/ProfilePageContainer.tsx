@@ -14,6 +14,7 @@ import ProfilePage from "./ProfilePage";
 import {setAuthUserProfile} from "../../redux/auth_reducer";
 import {AppStateType} from "../../redux/redux-store";
 import {ProfileType} from "../../types/types";
+import PreLoader from "../common/PreLoader/PreLoader";
 
 type MapStatePropsType = {
     userId: number | null,
@@ -64,7 +65,7 @@ class ProfilePageContainer extends React.Component<PropsType> {
     componentDidMount() {
         this.refreshProfile();
     }
-    componentDidUpdate(prevProps: PropsType, prevState: AppStateType, snapshot: any) {
+    componentDidUpdate(prevProps: PropsType, prevState: AppStateType) {
         if (this.props.match.params.userId !== prevProps.match.params.userId){
             this.refreshProfile();
         }
@@ -72,7 +73,7 @@ class ProfilePageContainer extends React.Component<PropsType> {
 
     render() {
         if (this.props.profile === null){
-            return <div>loading...</div>
+            return /*<div>loading...</div>*/ <PreLoader/>
         }
         return(
             <ProfilePage { ...this.props } profile={ this.props.profile } status={ this.props.status }

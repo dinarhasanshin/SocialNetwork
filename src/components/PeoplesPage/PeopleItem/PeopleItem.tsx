@@ -16,17 +16,6 @@ type PropsType = {
 const PeopleItem: React.FC<PropsType> = (props) => {
     let u = props.user;
     return (
-/*        <>
-            <div className={s.people_item}>
-                <div className={s.people_item_content}>
-                    <p className={s.people_item_img}/>
-                    {/!*<img className={s.people_item_img} src="" alt=""/>*!/}
-                    <span className={s.people_item_name}>Dinar Hasanshin</span>
-                    <button className={s.people_item_btn}>Follow</button>
-                </div>
-                <hr/>
-            </div>
-        </>*/
         <div className={s.people_item}>
             <div className={s.people_item_content}>
                 <NavLink to={"/profile/" + u.id}>
@@ -61,4 +50,4 @@ const PeopleItem: React.FC<PropsType> = (props) => {
     );
 };
 
-export default PeopleItem;
+export default React.memo(PeopleItem);

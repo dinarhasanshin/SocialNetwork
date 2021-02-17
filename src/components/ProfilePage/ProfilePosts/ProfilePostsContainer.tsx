@@ -1,5 +1,4 @@
-import React from 'react'
-import {actions, addPostProfile, InitialStateType} from '../../../redux/profile_reducer';
+import {addPostProfile, InitialStateType} from '../../../redux/profile_reducer';
 import { connect } from "react-redux";
 import ProfilePosts from "./ProfilePosts";
 import {AppStateType} from "../../../redux/redux-store";
@@ -12,12 +11,6 @@ type MapStatePropsType = {
 type MapDispatchPropsType = {
     addPostProfile: (newPostText: string) => void
 }
-/*type PropsType = MapStatePropsType & MapDispatchPropsType
-
-type OwnPropsType = {
-
-}*/
-
 
 let mapStateToProps = (state: AppStateType) => {
     return{

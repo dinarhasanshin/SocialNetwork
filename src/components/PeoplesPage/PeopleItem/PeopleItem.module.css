@@ -1,15 +1,17 @@
 .content_block_size{
     margin: 16px 6px 6px 6px;
     border-radius: 6px;
-    background-color: white;
+    background-color: red;
 }
 
 .people_item hr{
     margin: 0;
     padding: 0;
+    grid-area: pit;
 }
 .people_item{
     background-color: white;
+    box-sizing: revert;
 }
 .people_item_content{
     padding: 5px 0;
@@ -46,14 +48,15 @@
 .people_item_name{
     grid-area: pia;
     margin-top: 10px;
+    text-overflow: clip;
 }
 .people_item_btn_div{
     grid-area: pib;
     display: flex;
     justify-content: center;
 }
-.people_item_btn{
-
+.people_item_btn_disable{
+    color: black;
     height: 25px;
     width: 90px;
     border-radius: 5px;
@@ -62,14 +65,15 @@
     margin-top: 10px;
     z-index: 2;
 }
-.people_item_btn_disable{
-    background-color: green;
+.people_item_btn{
+    background-color: #2787f5;
     height: 25px;
     width: 90px;
-    border-radius: 5px;
+    border-radius: 2px;
     border: 0;
     outline: none;
     margin-top: 10px;
+    color: white;
     z-index: 2;
 }
 .people_item_btn{

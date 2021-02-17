@@ -3,7 +3,7 @@ import s from "../ProfileInfo.module.css";
 import React from "react";
 import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {Input} from "../../../common/FormsControl/FormsControl";
-import {ContactsType, ProfileType} from "../../../../types/types";
+import {ProfileType} from "../../../../types/types";
 
 
 type ProfileInfoFormOwnPropsType = {

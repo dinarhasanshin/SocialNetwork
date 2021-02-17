@@ -20,6 +20,7 @@
     background-color: #dfe6ed;
     border: 0px solid #dfe6ed;
     border-radius: 5px;
+    cursor: pointer;
 }
 .nav_icons{
     width: 18px;

@@ -8,6 +8,8 @@ import {initializeApp} from "./redux/app_reducer";
 import './App.css';
 import NavWrapper from "./components/NavWrapper/NavWrapper";
 import {AppStateType} from "./redux/redux-store";
+import {PreLoaderApp} from "./components/common/PreLoader/PreLoader";
+import PreLoader from "./components/common/PreLoader/PreLoader";
 
 const PeoplesPageContainer = React.lazy(() => import('./components/PeoplesPage/PeoplesPageContainer'));
 const ProfilePageContainer = React.lazy(() => import('./components/ProfilePage/ProfilePageContainer'));
@@ -27,7 +29,7 @@ class App extends React.Component<MapPropsType & DispatchPropType> {
     render() {
 
         if(!this.props.initialized){
-            return <p>Loading...</p>
+            return <PreLoaderApp/>
         }
         return (
             <HashRouter>
@@ -41,12 +43,12 @@ class App extends React.Component<MapPropsType & DispatchPropType> {
                                }}/>
                         <Route path="/peoples"
                                render={() => {
-                                   return <Suspense fallback={<div>Loading....</div>}><PeoplesPageContainer/></Suspense>
+                                   return <Suspense fallback={<PreLoader/>}><PeoplesPageContainer/></Suspense>
                                }}/>
 
                         <Route path="/profile/:userId?"
                                render={() => {
-                                   return <Suspense fallback={<div>Loading....</div>}><ProfilePageContainer/></Suspense>
+                                   return <Suspense fallback={<PreLoader/>}><ProfilePageContainer/></Suspense>
                                }}/>
 
                         {/*                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>*/}

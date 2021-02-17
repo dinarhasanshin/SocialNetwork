@@ -1,43 +1,59 @@
 .peoples_content{
-    width: 550px;
     grid-area: ht;
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-template-areas:
+            "plc prc";
+}
+.peoples_left_content{
+    grid-area: plc;
+    background-color: cyan;
+    padding: 14px;
+    width: 490px;
+}
+.peoples_right_content{
+    grid-area: prc;
+    background-color: red;
+    padding: 14px;
+}
+.selected {
+    color: white;
+    background-color: #2787f5;
+    padding-left: 0;
+    border-left: 2px solid black;
+
+    margin-left: 1px;
+}
+select {
+    overflow-y: auto;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+select option {
+    margin: 1px 0px;
+    padding: 5px 0 0 3px;
+    font-size: 17px;
+}
+select option:hover {
+    background-color: #2787f5;
+    cursor: pointer;
+}
+select option:checked {
+    background-color: #2787f5;
 }
 .content_block_size{
     margin: 16px 6px 6px 6px;
     border-radius: 6px;
     background-color: white;
 }
-.preloader{
-    display: flex;
-    margin: 0 auto;
+.content_block_size_right{
+    margin: 16px 0px 6px 6px;
+    border-radius: 6px;
+    background-color: white;
 }
-.ldsCircle {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    transform: translateZ(1px);
+.toggle_peoples_container{
+    grid-area: tpc;
+    background-color: darkblue;
 }
-.ldsCircle > div {
-    display: inline-block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    background: #fcf;
-    animation: ldsCircle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-}
-@keyframes ldsCircle {
-    0%, 100% {
-        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-    }
-    0% {
-        transform: rotateY(0deg);
-    }
-    50% {
-        transform: rotateY(1800deg);
-        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
-    }
-    100% {
-        transform: rotateY(3600deg);
-    }
-}
+

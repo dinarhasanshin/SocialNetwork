@@ -1,8 +1,7 @@
 import { FriendsCollectionType } from "../types/types";
 import {updateObjectInArray} from "../utils/object-helpers";
 import {Dispatch} from "redux";
-import {ThunkAction} from "redux-thunk";
-import {AppStateType, BaseThunkType, InferActionsType} from "./redux-store";
+import {BaseThunkType, InferActionsType} from "./redux-store";
 import {usersAPI} from "../api/users-api";
 
 
@@ -12,7 +11,12 @@ let initialState = {
     totalUserCount: 0 as number,
     currentPage: 1 as number,
     isFetching: true as boolean,
-    isFollowing: [] as Array<number>
+    isFollowing: [] as Array<number>,
+    filter: {
+        isFriends: null as boolean | null,
+        term: "" as string
+    }
+
 }
 
 type InitialState = typeof initialState
@@ -41,6 +45,10 @@ const peoples_reducer = (state = initialState, action: ActionTypes) : InitialSta
             return {...state, totalUserCount: action.totalUsersCount}
         case 'TOGGLE_IS_FETCHING':
             return {...state, isFetching: action.isFetching}
+        case 'SET_IS_FRIENDS':
+            return {...state, filter: {...state.filter, isFriends: action.isFriends}}
+        case 'SET_IS_TERM_SEARCH':
+            return {...state, filter: {...state.filter, term: action.term}}
         case 'TOGGLE_IS_FOLLOWING':
             return {
                 ...state,
@@ -61,6 +69,8 @@ export const actions = {
     follow: (userId: number) => ({type: 'FOLLOW', userId} as const),
     unFollow: (userId: number) => ({type: 'UNFOLLOW', userId} as const),
     setUsers: (users: Array<FriendsCollectionType>) => ({type: 'SET_USERS', users} as const),
+    setIsFriends: (isFriends: boolean | null) => ({type: 'SET_IS_FRIENDS', isFriends} as const),
+    setTermSearch: (term: string) => ({type: 'SET_IS_TERM_SEARCH', term} as const),
     setCurrentPage: (currentPage: number) => ({type: 'SET_CURRENT_PAGE', currentPage} as const),
     setTotalUsersCount: (totalUsersCount: number) => ({type: 'SET_TOTAL_COUNT', totalUsersCount} as const),
     toggleIsFetching: (isFetching: boolean) => ({type: 'TOGGLE_IS_FETCHING', isFetching} as const),
@@ -71,17 +81,16 @@ type ThunkActionTypes = BaseThunkType<ActionTypes>
 
 
 
-export const getUsers = (currentPage: number, pageSize: number): ThunkActionTypes => async (dispatch) => {
+export const getUsers = (currentPage: number, pageSize: number, term?: string, isFriends?: boolean | null): ThunkActionTypes => async (dispatch) => {
 
     dispatch(actions.setCurrentPage(currentPage));
     dispatch(actions.toggleIsFetching(true));
 
-    let data = await usersAPI.getUsers(currentPage, pageSize);
+    let data = await usersAPI.getUsers(currentPage, pageSize, term, isFriends);
 
     dispatch(actions.toggleIsFetching(false));
     dispatch(actions.setUsers(data.items));
-    /*dispatch(setTotalUsersCount(data.totalCount));*/
-    dispatch(actions.setTotalUsersCount(400));
+    dispatch(actions.setTotalUsersCount(data.totalCount));
 }
 
 const userFollowUnFollowFlow = async (dispatch: Dispatch<ActionTypes>, userId: number,
