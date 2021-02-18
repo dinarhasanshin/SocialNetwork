@@ -46,8 +46,9 @@ const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType, OwnPropsType> &
                     captchaUrl && <Field component={Input} name={"captcha"}
                                          placeholder={"Введите код с картинки"}/>
                 }
-                                {
-                    error !== null && <div className={s.loginFormError}>{error}</div>
+                {
+                    error !== undefined &&<div className={s.loginFormError}>{error}</div>
+
                 }
                 <div className={s.login_button}>
                     <button>Sign in</button>
