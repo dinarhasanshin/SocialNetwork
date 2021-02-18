@@ -5,6 +5,7 @@ import {BaseThunkType} from "./redux-store";
 import {InferActionsType} from './redux-store';
 import {authAPI} from "../api/auth-api";
 import {profileAPI} from "../api/profile-api";
+import {securityAPI} from "../api/security-api";
 
 
 let initialState = {
@@ -12,6 +13,7 @@ let initialState = {
     login: null as (string | null),
     email: null as (string | null),
     isAuth: false as boolean,
+    captchaUrl: null as (string | null),
     authProfile: null as (ProfileType | null)
 }
 
@@ -31,6 +33,11 @@ const auth_reducer = (state = initialState, action: ActionTypes): InitialStateTy
                 ...state,
                 authProfile: action.profile,
             }
+        case 'SET_CAPTCHA':
+            return {
+                ...state,
+                captchaUrl: action.payload,
+            }
         default:
             return state;
 
@@ -41,9 +48,11 @@ type ActionTypes = InferActionsType< typeof actions>
 
 export const actions = {
     setAuthUserData: (id: number | null, login: string | null, email: string | null, isAuth: boolean) =>
-        ({type: 'SET_USER_DATA', data: { id, login, email, isAuth }} as const),
+        ({type: 'SET_USER_DATA', data: {id, login, email, isAuth}} as const),
     setAuthProfile: (profile: ProfileType) =>
-        ({type: 'SET_AUTH_PROFILE', profile} as const)
+        ({type: 'SET_AUTH_PROFILE', profile} as const),
+    setCaptchaUrl: (url: string | null) =>
+        ({type: 'SET_CAPTCHA', payload: url} as const)
 }
 
 
@@ -61,12 +70,16 @@ export const userAuth = (): ThunkActionTypes => async (dispatch) => {
     }
 }
 
-export const authLogin = (email: string, password: string, rememberMe: boolean): ThunkActionTypes => async (dispatch) => {
-    let data = await authAPI.login(email, password, rememberMe)
+export const authLogin = (email: string, password: string, rememberMe: boolean, captcha?: string): ThunkActionTypes => async (dispatch) => {
+    let data = await authAPI.login(email, password, rememberMe, captcha)
 
     if (data.resultCode === 0){
         dispatch(userAuth())
-    } else{
+    }
+    else{
+        if(data.resultCode === 10){
+            dispatch(getCaptchaUrl())
+        }
         let message = data.messages.length > 0 ? data.messages[0] : "Some error";
 
         dispatch(stopSubmit("login", {_error: message}));
@@ -78,7 +91,16 @@ export const authLogout = (): ThunkActionTypes => async (dispatch) => {
 
     if (data.resultCode === 0){
         dispatch(actions.setAuthUserData(null, null, null, false));
+        dispatch(actions.setCaptchaUrl(null));
     }
+}
+
+export const getCaptchaUrl = (): ThunkActionTypes => async (dispatch) => {
+    let data = await securityAPI.getCaptchaUrl();
+    if(data){
+        dispatch(actions.setCaptchaUrl(data.url))
+    }
+        /*dispatch(actions.setCaptchaUrl(data.url));*/
 }
 
 export const setAuthUserProfile = (userId: number): ThunkActionTypes => async (dispatch) => {
