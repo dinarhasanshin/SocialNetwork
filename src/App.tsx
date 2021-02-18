@@ -53,9 +53,10 @@ class App extends React.Component<MapPropsType & DispatchPropType> {
 
                         {/*                    <Route path="/friends_content" render={() => <FriendsContentContainer/>}/>*/}
 
-                        <Route path="/login" render={() => <Login/>}/>
+
                     </Switch>
                 </div>
+                <Route path="/login" render={() => <Login/>}/>
             </HashRouter>
         );
     }

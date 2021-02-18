@@ -33,7 +33,10 @@ const Header: React.FC<PropsType> = (props) =>{
                     } <InlineIcon icon={angleDown}/>
 
             </span>
-                :<span className={s.header_auth}><NavLink to={"/login"}>Login</NavLink></span>
+                :/*<span className={s.header_auth}><NavLink to={"/login"}>Login</NavLink></span>*/
+                <span className={s.header_auth}>
+                    <NavLink to={"/login"} className={s.auth_name}>Login</NavLink>
+                </span>
             }
             {props.isAuth && props.logOutMenu
             && <div className={s.logOutMenu}>

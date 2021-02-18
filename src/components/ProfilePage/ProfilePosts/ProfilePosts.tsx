@@ -6,6 +6,8 @@ import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {Input} from "../../common/FormsControl/FormsControl";
 import {InitialStateType} from "../../../redux/profile_reducer";
 import {ProfileType} from "../../../types/types";
+// @ts-ignore
+import userPhoto from "../../../assets/images/defaulIconProfile.png";
 
 export type MapStatePropsType = {
     profilePage: InitialStateType,
@@ -53,8 +55,9 @@ const AddPostForm: React.FC<InjectedFormProps<ProfilePostsFormValuesType, Profil
         <form className={s.posts_input  + " " + s.content_block_size} onSubmit={ handleSubmit }>
             <div className={s.posts_input_left}>
                 {
-                    props.profile.photos.large &&
-                    <img src={props.profile.photos.large} alt="" className={s.posts_img}/>
+                    props.profile.photos.large
+                    ?<img src={props.profile.photos.large} alt="" className={s.posts_img}/>
+                    :<img src={userPhoto} alt="" className={s.posts_img}/>
                 }
                 <p />
                 <Field component={ Input } className={s.posts_textarea} name={ "newPostText" } placeholder={"Enter your post"}/>

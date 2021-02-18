@@ -14,26 +14,36 @@ let maxLength30 = maxLengthCreator(30);
 
 const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType>> = ({handleSubmit, error}) => {
     return (
-        <form onSubmit={ handleSubmit }>
-            <div>
+        <div className={s.login_container_form + " " + s.content_block_size}>
+            <div className={s.header_login_form}>
+                <p className={s.header_logo}>
+                    CF
+                </p>
+                <h2>CubeFace</h2>
+            </div>
+
+
+            <form onSubmit={handleSubmit} className={s.login_form}>
                 <Field component={Input} name={"email"}
-                       placeholder={"Email"} validate={ [required, maxLength30] }/>
-            </div>
-            <div>
+                       placeholder={"Логин: free@samuraijs.com"}/>
                 <Field component={Input} name={"password"}
-                       placeholder={"Password"} type={"password"} validate={ [required, maxLength30] }/>
-            </div>
-            <div>
-                <Field component={Input} name={"rememberMe"}
-                       type="checkbox" /> remember me
-            </div>
-            {
-                error !== null && <div className={s.loginFormError}>{ error }</div>
-            }
-            <div>
-                <button>Sign in</button>
-            </div>
-        </form>
+                       placeholder={"Пароль: free"} type={"password"}/>
+
+                <div className={s.login_checkbox_input}>
+                    <Field  component={Input} name={"rememberMe"}
+                           type="checkbox"/> remember me
+                </div>
+
+
+                {/*                {
+                    error !== null && <div className={s.loginFormError}>{error}</div>
+                }*/}
+                <div className={s.login_button}>
+                    <button>Sign in</button>
+                </div>
+            </form>
+        </div>
+
     )
 }
 
@@ -63,8 +73,8 @@ const login: React.FC<MapStatePropsType & MapDispatchPropsType> = (props) => {
         return <Redirect to={"/profile"}/>
     }
 
-    return <div>
-        <h1>Login</h1>
+    return <div className={s.login_page}>
+
         <LoginReduxForm onSubmit={ onSubmit }/>
     </div>
 
