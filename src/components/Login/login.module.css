@@ -28,11 +28,6 @@
     border-radius: 6px;
     background-color: white;
 }
-.login_container_form {
-/*    display: flex;
-    justify-content: center;
-    flex-direction: column;*/
-}
 .login_container_form h2 {
     text-align: center;
     font-size: 35px;
