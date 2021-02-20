@@ -1,7 +1,6 @@
 import React from 'react';
-import {Field, Fields, InjectedFormProps, reduxForm} from "redux-form";
+import {Field, InjectedFormProps, reduxForm} from "redux-form";
 import {Input} from "../common/FormsControl/FormsControl";
-import {maxLengthCreator, required} from "../../utils/validators/validators";
 import {connect} from "react-redux";
 import {authLogin} from "../../redux/auth_reducer";
 import {Redirect} from "react-router-dom";
@@ -10,7 +9,6 @@ import s from './login.module.css';
 import {AppStateType} from "../../redux/redux-store";
 
 
-let maxLength30 = maxLengthCreator(30);
 
 type OwnPropsType = {
     captchaUrl: string | null
@@ -42,13 +40,14 @@ const LoginForm: React.FC<InjectedFormProps<LoginFormValuesType, OwnPropsType> &
                 {
                     captchaUrl && <img src={captchaUrl} alt=""/>
                 }
+
                 {
                     captchaUrl && <Field component={Input} name={"captcha"}
                                          placeholder={"Введите код с картинки"}/>
                 }
+
                 {
                     error !== undefined &&<div className={s.loginFormError}>{error}</div>
-
                 }
                 <div className={s.login_button}>
                     <button>Sign in</button>
