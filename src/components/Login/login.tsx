@@ -1,12 +1,12 @@
 import React from 'react';
-import {Field, InjectedFormProps, reduxForm} from "redux-form";
-import {Input} from "../common/FormsControl/FormsControl";
-import {connect} from "react-redux";
-import {authLogin} from "../../redux/auth_reducer";
-import {Redirect} from "react-router-dom";
+import { Field, InjectedFormProps, reduxForm } from "redux-form";
+import { connect } from "react-redux";
+import { authLogin } from "../../redux/auth_reducer";
+import { Redirect } from "react-router-dom";
 // @ts-ignore
 import s from './login.module.css';
-import {AppStateType} from "../../redux/redux-store";
+import { AppStateType } from "../../redux/redux-store";
+import { Input } from '../common/FormsControl/FormsControl';
 
 
 
