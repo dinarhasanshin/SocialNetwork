@@ -1,12 +1,12 @@
-import React from 'react';
-import {getUsers, userFollow, userUnFollow, actions} from '../../redux/peoples_reducer';
-import {connect} from "react-redux";
+ import React from 'react';
+import { getUsers, userFollow, userUnFollow, actions } from '../../redux/peoples_reducer';
+import { connect } from "react-redux";
 // @ts-ignore
-import {compose} from "redux";
+import { compose } from "redux";
 import withAuthRedirect from "../../hoc/withAuthRedirect";
 import PeoplesPage from "./PeoplesPage";
-import {FriendsCollectionType} from "../../types/types";
-import {AppStateType} from "../../redux/redux-store";
+import { FriendsCollectionType } from "../../types/types";
+import { AppStateType } from "../../redux/redux-store";
 
 
 type MapStatePropsType = {

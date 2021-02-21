@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import {connect} from "react-redux";
-import {authLogout, setAuthUserProfile, userAuth} from "../../redux/auth_reducer";
-import {RouterProps, withRouter} from "react-router-dom";
-import {compose} from "redux";
-import {AppStateType} from "../../redux/redux-store";
-import {ProfileType} from "../../types/types";
-import {InitialStateType} from "../../redux/profile_reducer";
+import { connect } from "react-redux";
+import { authLogout, setAuthUserProfile, userAuth } from "../../redux/auth_reducer";
+import { RouterProps, withRouter } from "react-router-dom";
+import { compose } from "redux";
+import { AppStateType } from "../../redux/redux-store";
+import { ProfileType } from "../../types/types";
+import { InitialStateType } from "../../redux/profile_reducer";
 
 
 type MapStatePropsType = {

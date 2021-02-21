@@ -1,4 +1,4 @@
-import {Field, Form, Formik, FormikHelpers, FormikValues} from "formik";
+import { Field, Form, Formik, FormikHelpers, FormikValues } from "formik";
 import React from "react";
 // @ts-ignore
 import s from './PeoplesSearchForm.module.css';

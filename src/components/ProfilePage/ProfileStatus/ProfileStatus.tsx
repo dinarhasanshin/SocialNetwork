@@ -1,4 +1,4 @@
-import React, {useState, useEffect, ChangeEvent} from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 // @ts-ignore
 import s from './ProfileStatus.module.css';
 

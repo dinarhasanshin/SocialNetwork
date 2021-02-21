@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import s from "./Paginator.module.css";
 
 const Paginator = ({portionSize = 10, ...props}) => {

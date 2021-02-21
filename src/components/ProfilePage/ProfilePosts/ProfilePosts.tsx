@@ -2,10 +2,10 @@ import React from 'react';
 // @ts-ignore
 import s from "./ProfilePosts.module.css";
 import PostItem from "./PostItem/PostItem";
-import {Field, InjectedFormProps, reduxForm} from "redux-form";
-import {Input} from "../../common/FormsControl/FormsControl";
-import {InitialStateType} from "../../../redux/profile_reducer";
-import {ProfileType} from "../../../types/types";
+import { Field, InjectedFormProps, reduxForm } from "redux-form";
+import { Input } from "../../common/FormsControl/FormsControl";
+import { InitialStateType } from "../../../redux/profile_reducer";
+import { ProfileType } from "../../../types/types";
 // @ts-ignore
 import userPhoto from "../../../assets/images/defaulIconProfile.png";
 

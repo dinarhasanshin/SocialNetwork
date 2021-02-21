@@ -1,10 +1,10 @@
 import React from 'react';
 // @ts-ignore
 import s from "./PeopleItem.module.css";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // @ts-ignore
 import userPhoto from "../../../assets/images/defaulIconProfile.png";
-import {FriendsCollectionType} from "../../../types/types";
+import { FriendsCollectionType } from "../../../types/types";
 
 type PropsType = {
     user: FriendsCollectionType,

@@ -1,7 +1,7 @@
 import React from 'react';
 // @ts-ignore
 import s from "./PostItem.module.css";
-import {InlineIcon} from "@iconify/react";
+import { InlineIcon } from "@iconify/react";
 import thumbsUp from "@iconify-icons/uil/thumbs-up";
 
 type PropsType = {

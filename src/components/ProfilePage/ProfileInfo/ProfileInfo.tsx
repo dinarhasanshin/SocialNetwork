@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 // @ts-ignore
 import s from "./ProfileInfo.module.css";
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm';
-import {ContactsType, ProfileType} from "../../../types/types";
+import { ContactsType, ProfileType } from "../../../types/types";
 
 
 type ProfileInfoPropsType = {

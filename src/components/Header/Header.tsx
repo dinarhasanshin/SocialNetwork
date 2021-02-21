@@ -1,10 +1,10 @@
 import React from 'react';
 // @ts-ignore
 import s from './Header.module.css';
-import {NavLink} from "react-router-dom";
-import {InlineIcon} from "@iconify/react";
+import { NavLink } from "react-router-dom";
+import { InlineIcon } from "@iconify/react";
 import angleDown from "@iconify-icons/uil/angle-down";
-import {ProfileType} from "../../types/types";
+import { ProfileType } from "../../types/types";
 // @ts-ignore
 import userPhoto from "../../assets/images/defaulIconProfile.png";
 

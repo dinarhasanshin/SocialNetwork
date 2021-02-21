@@ -1,8 +1,8 @@
 import React from 'react';
 // @ts-ignore
 import s from './NavWrapper.module.css';
-import {NavLink} from "react-router-dom";
-import {InlineIcon} from "@iconify/react";
+import { NavLink } from "react-router-dom";
+import { InlineIcon } from "@iconify/react";
 import userCircle from "@iconify-icons/uil/user-circle";
 import commentIcon from "@iconify-icons/uil/comment";
 import usersAlt from "@iconify-icons/uil/users-alt";

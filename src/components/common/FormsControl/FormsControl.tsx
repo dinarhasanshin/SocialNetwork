@@ -1,5 +1,5 @@
 import React from 'react';
-import {WrappedFieldInputProps, WrappedFieldMetaProps} from 'redux-form/lib/Field';
+import { WrappedFieldInputProps, WrappedFieldMetaProps } from 'redux-form/lib/Field';
 // @ts-ignore
 import s from './FormsControl.module.css';
 

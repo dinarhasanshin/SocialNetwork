@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from "react-redux";
+import { connect } from "react-redux";
 import {
     actions,
     getUserStatus, InitialStateType,
@@ -8,12 +8,12 @@ import {
     setUserProfile,
     updateUserStatus
 } from '../../redux/profile_reducer';
-import {RouteComponentProps, withRouter} from 'react-router-dom';
-import {compose} from "redux";
+import { RouteComponentProps, withRouter } from 'react-router-dom';
+import { compose } from "redux";
 import ProfilePage from "./ProfilePage";
-import {setAuthUserProfile} from "../../redux/auth_reducer";
-import {AppStateType} from "../../redux/redux-store";
-import {ProfileType} from "../../types/types";
+import { setAuthUserProfile } from "../../redux/auth_reducer";
+import { AppStateType } from "../../redux/redux-store";
+import { ProfileType } from "../../types/types";
 import PreLoader from "../common/PreLoader/PreLoader";
 
 type MapStatePropsType = {
@@ -73,7 +73,7 @@ class ProfilePageContainer extends React.Component<PropsType> {
 
     render() {
         if (this.props.profile === null){
-            return /*<div>loading...</div>*/ <PreLoader/>
+            return <PreLoader/>
         }
         return(
             <ProfilePage { ...this.props } profile={ this.props.profile } status={ this.props.status }

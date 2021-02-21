@@ -1,8 +1,8 @@
-import React, {ChangeEvent} from 'react';
+import React, { ChangeEvent } from 'react';
 // @ts-ignore
 import s from './PeoplesPage.module.css';
 import PeopleItem from "./PeopleItem/PeopleItem";
-import {FriendsCollectionType} from "../../types/types";
+import { FriendsCollectionType } from "../../types/types";
 import PeoplesSearchForm from "./PeoplesSearchForm/PeoplesSearchForm";
 import Paginator from "../common/Paginator/Paginator";
 import PreLoader from "../common/PreLoader/PreLoader";
